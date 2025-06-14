@@ -1,82 +1,132 @@
 <?xml version='1.0' encoding='utf-8'?>
-<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0"><channel><title>Agent Engineering Feed</title><link>https://surly-16.github.io/js-audio-feed/Agent%20Engineering/</link><description>Narrated episodes on Agent Engineering</description><language>en-au</language><itunes:explicit>no</itunes:explicit><itunes:image href="https://github.com/surly-16/js-audio-feed/blob/main/Agent%20Engineering/cover.png?raw=true" /><image><url>https://github.com/surly-16/js-audio-feed/blob/main/Agent%20Engineering/cover.png?raw=true</url><title>Agent Engineering Feed</title><link>https://surly-16.github.io/js-audio-feed/Agent%20Engineering/</link></image><item><title>001 Creating Self Documenting Agent Systems For Regulatory Compliance</title><guid>001_creating_self_documenting_agent_systems_for_regulatory_compliance</guid><pubDate>Sun, 15 Jun 2025 01:24:34 +1000</pubDate><enclosure url="https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Agent%20Engineering/media/001_creating_self_documenting_agent_systems_for_regulatory_compliance.mp3" length="4659309" type="audio/mpeg" /><description>Narrated episode: 001 Creating Self Documenting Agent Systems For Regulatory Compliance
+<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0"><channel><title>Agent Engineering Feed</title><link>https://surly-16.github.io/js-audio-feed/Agent%20Engineering/</link><description>Narrated episodes on Agent Engineering</description><language>en-au</language><itunes:explicit>no</itunes:explicit><itunes:image href="https://github.com/surly-16/js-audio-feed/blob/main/Agent%20Engineering/cover.png?raw=true" /><image><url>https://github.com/surly-16/js-audio-feed/blob/main/Agent%20Engineering/cover.png?raw=true</url><title>Agent Engineering Feed</title><link>https://surly-16.github.io/js-audio-feed/Agent%20Engineering/</link></image><item><title>002 Designing Optimal Agent Architectures For Scalable Ai Workflows</title><guid>002_designing_optimal_agent_architectures_for_scalable_ai_workflows</guid><pubDate>Sun, 15 Jun 2025 01:27:38 +1000</pubDate><enclosure url="https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Agent%20Engineering/media/002_designing_optimal_agent_architectures_for_scalable_ai_workflows.mp3" length="4809837" type="audio/mpeg" /><description>Narrated episode: 002 Designing Optimal Agent Architectures For Scalable Ai Workflows
 
-Picture this: your risk team just spent three weeks documenting a model validation process, only to discover the documentation was outdated before it even hit SharePoint. Sound familiar? Here's the thing—what if your AI agents could document themselves, in real-time, creating an audit trail that regulators actually want to read?
+Let's talk about something that's been keeping me up at night—and probably yours too. We've all built these impressive AI workflows, but here's the brutal truth: most of them break the moment they need to scale beyond a proof of concept. 
 
-I'm talking about self-documenting agent systems. Not just logging what happened, but creating living documentation that explains why decisions were made, how confidence levels were calculated, and what alternative paths were considered. This isn't theoretical—we're implementing this right now across our credit risk and compliance teams.
+I learned this the hard way last quarter when our risk team's document processing system—which worked beautifully for 100 documents a day—completely fell apart when we hit 10,000. The architecture wasn't wrong; it just wasn't designed for reality. 
 
-
-
-Let me break down what makes a system truly self-documenting. First, it's about embedding documentation generation directly into the agent's workflow. When your agent evaluates a loan application, it doesn't just output approve or decline. It generates a structured narrative: "Evaluated application 2847-B against policy framework version 3.2. Primary factors considered: debt-to-income ratio at 42 percent exceeded threshold by 2 percent. Compensating factors analyzed: stable employment history spanning 8 years, existing customer relationship with zero defaults. Confidence level: 87 percent based on 1,247 similar historical cases."
-
-That's not a log entry. That's a compliance officer's dream.
+So today, let's dive into designing agent architectures that actually scale. Not the textbook version, but the version that survives contact with real enterprise constraints.
 
 
 
-The architecture is surprisingly straightforward. You wrap your existing agents with a documentation layer that captures three things: intent, process, and rationale. Intent is what the agent was asked to do. Process is how it went about doing it. Rationale is why it made specific choices.
-
-Here's where it gets interesting for regulated environments. Traditional documentation assumes a human reader who can infer context. Self-documenting agents assume nothing. They explain their reasoning at multiple levels of abstraction. The executive summary for senior management. The technical details for model validators. The step-by-step logic for auditors.
+Here's the core concept: scalable agent architectures aren't about making one super-intelligent agent. They're about creating networks of specialized agents that can work independently and in parallel. Think of it like moving from a brilliant individual contributor to a well-orchestrated team.
 
 
 
-Let me give you a concrete example from our mortgage origination process. We built an agent that reviews property valuations against multiple data sources. Instead of just flagging discrepancies, it documents its analysis: "Property at 42 Smith Street valued at 850,000 dollars by primary source. Secondary source indicates 920,000. Historical growth rate for suburb: 7.2 percent annually. Discrepancy of 8.2 percent falls within acceptable variance per policy document MV-2024-03. Recommendation: proceed with lower valuation for conservative risk assessment."
-
-Every decision point becomes a documentation point. Every calculation includes its methodology. Every recommendation links back to specific policies.
+In practice, this means three fundamental design principles. First, decomposition. Break complex workflows into discrete, atomic tasks. Instead of one agent that "processes loan applications," you have separate agents for document extraction, validation, risk scoring, and decision synthesis.
 
 
 
-But here's what really changes the game—these aren't static documents. They're queryable, searchable, and most importantly, they can be automatically validated against your policy frameworks. When APRA asks why you approved a particular loan that later defaulted, you don't scramble through emails and spreadsheets. You query the self-documentation: "Show me the decision rationale for loan application X, including all risk factors considered and policy frameworks applied."
-
-
-The technical implementation leverages structured output from your LLMs. You're essentially creating a documentation schema that your agents populate in real-time. Think of it as instrumentation, but for compliance rather than performance monitoring. Every function call, every decision branch, every confidence calculation gets captured in a standardized format.
+Second, stateless operation. Each agent should be able to process its task without needing context from previous runs. This is crucial for horizontal scaling. When our mortgage team implemented this, they went from processing batches sequentially to running hundreds of assessments in parallel.
 
 
 
-
-Now, let's talk about implementation patterns that actually work in enterprise settings. Start with your highest-risk processes—the ones that get the most regulatory scrutiny. For us, that was credit decisioning and anti-money laundering checks. Build your documentation templates based on what auditors actually ask for. I spent two days with our compliance team understanding their pain points. Turns out, they don't need more documentation—they need better documentation.
-
-The key insight? Structure your self-documentation around regulatory questions, not technical processes. Instead of "function calculate_risk_score was called with parameters X, Y, Z," you want "Customer risk score calculated using factors: transaction frequency, geographic risk rating, and customer segment. Method aligns with AUSTRAC guidance note 14.2."
+Third, explicit handoffs. Agents communicate through well-defined interfaces—typically message queues or event streams. No agent directly calls another. This sounds like overhead, but it's what enables true scalability.
 
 
 
-Here's a pattern that's working well for our teams. We create documentation templates for each agent type. A credit risk agent has different documentation needs than a customer service agent. The template defines required fields, optional context, and output format. The agent populates this template as it works, not as an afterthought.
-
-For example, our fraud detection agents use this structure: Detection trigger, investigation steps, evidence gathered, confidence assessment, and recommendation rationale. Each section has specific requirements. Evidence gathered must include data sources and timestamps. Confidence assessment must explain the calculation method. Recommendation rationale must reference specific policy clauses.
+Let me paint you a picture of how this works in our bank. Take our customer complaint handling system. Version one was a single agent that read complaints, categorized them, drafted responses, and routed for approval. Worked great for 50 complaints a day. Crashed and burned at 500.
 
 
 
-The real power comes from aggregation. When you have hundreds of agents generating self-documentation, you can start seeing patterns. Why do certain types of applications take longer to process? Where are agents expressing low confidence? Which policy clauses are most frequently referenced? This isn't just compliance—it's operational intelligence.
-
-We built a documentation analytics dashboard that our risk committee loves. It shows documentation coverage—what percentage of decisions are fully documented. It tracks documentation quality—are agents providing meaningful rationale or just boilerplate text? It identifies documentation gaps—where are humans having to fill in missing context?
+Version two? We redesigned it as a pipeline. The intake agent just extracts and structures the complaint text. The classification agent determines category and severity. The context agent pulls relevant customer history. The response agent generates the draft. The compliance agent checks for regulatory issues. The routing agent determines the approval path.
 
 
 
-
-Let me address the elephant in the room: performance impact. Yes, generating comprehensive documentation adds latency. Our credit decisioning agents went from 200 millisecond response times to 350 milliseconds. But here's the thing—that extra 150 milliseconds saves hours of manual documentation work. More importantly, it saves weeks of scrambling during audit season.
-
-
-The trick is to make documentation generation asynchronous where possible. The agent makes its decision and immediately returns the result. Documentation generation happens in parallel, with a service level agreement of completion within 5 seconds. This way, your operational flows aren't impacted, but your compliance requirements are still met.
+Each agent runs independently. If complaints spike, we spin up more instances of bottleneck agents. If classification is slow, we scale just that component. The architecture adapts to load patterns automatically.
 
 
 
-Now, here's where it gets really interesting for innovation teams. Self-documenting agents enable experimentation at scale. Want to test a new risk model? Deploy it alongside your existing model, and let the self-documentation capture the differences in decision-making. The documentation becomes your A/B test analysis.
-
-We ran a pilot with an enhanced credit scoring model. The self-documentation showed us exactly where it differed from our traditional model—not just in outcomes, but in reasoning. It flagged cases where the new model considered factors the old one ignored. It highlighted edge cases where confidence levels diverged significantly. This level of insight would have taken months of manual analysis to achieve.
+But here's where it gets interesting for regulated environments. This decomposition isn't just about performance—it's about auditability. When something goes wrong, we can trace exactly which agent made which decision. Every handoff is logged. Every transformation is versioned.
 
 
 
-The strategic implications are profound. Self-documenting agents shift compliance from a burden to a competitive advantage. While your competitors are drowning in manual documentation, your teams are iterating faster because they know every decision is automatically captured and explained.
-
-It changes how you think about model governance too. Instead of quarterly model reviews, you have continuous model monitoring through documentation analysis. Drift detection becomes trivial—just compare the documentation patterns over time. If your agents start referencing different policy clauses or expressing lower confidence in certain scenarios, you know something has changed.
+Our internal audit team loves this. Instead of trying to understand one massive black box, they can review discrete, focused components. Each agent has clear inputs, outputs, and decision criteria.
 
 
 
-Here's my challenge to you: pick one high-value, high-risk process in your organization. Build a proof of concept that generates just three pieces of self-documentation: what decision was made, what data supported it, and what policies governed it. Start simple. Use structured outputs from your existing LLMs. Create a basic template. Run it for a week and show the output to your compliance team.
-
-I guarantee they'll want more. And that's when you know you're onto something transformative—when compliance asks for more documentation, not less.
+Now, let's talk implementation. The key is choosing the right orchestration pattern. For simple workflows, use pipeline architectures—think Apache Airflow or Prefect. Each agent is a task, data flows linearly, and you get automatic retry and monitoring.
 
 
 
-The future of regulatory compliance isn't about building bigger documentation teams. It's about building systems that document themselves, that explain their reasoning in terms regulators understand, and that create audit trails people actually want to read. Self-documenting agents aren't just a technical solution—they're a strategic enabler for innovation in regulated environments.
+For complex workflows with conditional logic, consider event-driven architectures. Agents publish events to a message broker like Kafka or RabbitMQ. Other agents subscribe to relevant events. This creates flexible, dynamic workflows that can handle complex branching logic.
 
-Start small, think big, and remember: the best documentation is the kind that writes itself.</description></item></channel></rss>
+
+
+Here's a concrete example from our credit card fraud detection system. The transaction agent publishes every transaction as an event. Multiple specialized agents subscribe: the velocity checker looks for unusual spending patterns, the location analyzer checks geographic anomalies, the merchant profiler assesses vendor risk. Each publishes its own risk score as an event. A decision agent subscribes to all scores and makes the final call.
+
+
+
+The beauty? We can add new risk signals without touching existing agents. Last month, we added a device fingerprint agent. Took two days from concept to production because we didn't need to modify anything else.
+
+
+
+But scalability isn't just about handling more volume. It's about handling more complexity. As your use cases evolve, your architecture needs to evolve without requiring a complete rebuild.
+
+
+
+This is where the concept of agent registries becomes crucial. Instead of hard-coding agent connections, agents register their capabilities and requirements. The orchestrator dynamically routes tasks based on available agents and their declared capabilities.
+
+
+
+We implemented this for our document processing platform. Agents register what document types they can handle and what extraction capabilities they offer. When a new document type comes in, the system automatically routes it to capable agents. Adding support for a new document type means deploying a new agent—not modifying existing code.
+
+
+
+Now, let's address the elephant in the room: latency. Yes, distributed architectures add overhead. But here's the thing—in enterprise contexts, throughput usually matters more than individual transaction speed. Would you rather process one loan application in 30 seconds or a thousand in two minutes?
+
+
+
+That said, there are patterns to minimize latency. Use in-memory message brokers for high-frequency workflows. Implement agent pooling to avoid cold starts. Cache common computations. Our payment processing system uses all three techniques and handles 10,000 transactions per second with sub-second latency.
+
+
+
+Another critical aspect is error handling. In monolithic systems, one error can crash everything. In distributed agent architectures, failures are isolated. But this means you need robust error handling at the architecture level.
+
+
+
+Implement circuit breakers between agents. If an agent fails repeatedly, route around it. Use dead letter queues for failed messages. Build retry logic with exponential backoff. Most importantly, design for graceful degradation. If the sentiment analysis agent fails, the complaint system should still route complaints—just without sentiment scores.
+
+
+
+Let me share a strategic insight that took me too long to realize. The real power of scalable agent architectures isn't technical—it's organizational. When agents are loosely coupled, teams can work independently. The fraud team can improve their agents without coordinating with the transaction team. Innovation accelerates because dependencies decrease.
+
+
+
+This architectural pattern also enables progressive rollouts. Deploy new agent versions alongside old ones. Route a percentage of traffic to test. Monitor performance. Gradually increase traffic. If something breaks, instantly route back. We've eliminated "big bang" deployments entirely.
+
+
+
+From a cost perspective, granular scaling is a game-changer. In our old monolithic systems, we had to scale everything to handle peak loads. Now, we scale precisely what needs scaling. Our infrastructure costs dropped 40% while handling 3x more volume.
+
+
+
+Here's how this changes day-to-day workflows. Product owners can request new capabilities without architectural reviews. "We need to add ESG scoring to loan assessments." Great—build an ESG scoring agent and plug it into the existing workflow. What used to take months now takes weeks.
+
+
+
+For developers, it means clearer boundaries and responsibilities. Each agent has a specific job. Testing is simpler. Debugging is faster. Code reviews are focused. We've seen development velocity increase 2x since moving to this model.
+
+
+
+For operations teams, it means better observability. Each agent emits metrics. We can see exactly where bottlenecks occur. We can predict scaling needs based on upstream metrics. Incidents are easier to isolate and resolve.
+
+
+
+But perhaps most importantly, this architecture enables experimentation. Want to try a new LLM for document extraction? Deploy it as a new agent, route 5% of traffic, and compare performance. No risk to the existing system. This de-risks innovation dramatically.
+
+
+
+So here's your actionable insight: start small, but think distributed from day one. Even if you're building a simple workflow, structure it as loosely coupled agents. Use message passing instead of direct function calls. Build with queues and events, not synchronous requests.
+
+
+
+The overhead seems unnecessary at first. But when your proof of concept suddenly needs to handle enterprise scale—and it will—you'll thank yourself. Because rebuilding architectures under pressure is a special kind of hell I wouldn't wish on anyone.
+
+
+
+Remember, the goal isn't to build the most sophisticated architecture. It's to build one that can grow with your needs without requiring constant rebuilding. Design for the scale you'll need in 18 months, not the scale you need today.
+
+
+
+And trust me, in the world of enterprise AI, that scale always arrives faster than you think.</description></item><item><title>001 Creating Self Documenting Agent Systems For Regulatory Compliance</title><guid>001_creating_self_documenting_agent_systems_for_regulatory_compliance</guid><pubDate>Sun, 15 Jun 2025 01:24:34 +1000</pubDate><enclosure url="https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Agent%20Engineering/media/001_creating_self_documenting_agent_systems_for_regulatory_compliance.mp3" length="4659309" type="audio/mpeg" /><description>Narrated episode: 001 Creating Self Documenting Agent Systems For Regulatory Compliance</description></item></channel></rss>
