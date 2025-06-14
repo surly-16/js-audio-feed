@@ -1,98 +1,94 @@
 <?xml version='1.0' encoding='utf-8'?>
-<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0"><channel><title>Anonymous Narration Feed</title><link>https://surly-16.github.io/js-audio-feed/</link><description>Strategic narrated content on AI, banking, and innovation</description><language>en-au</language><itunes:explicit>no</itunes:explicit><itunes:image href="https://github.com/surly-16/js-audio-feed/blob/main/Cover.png?raw=true" /><image><url>https://github.com/surly-16/js-audio-feed/blob/main/Cover.png?raw=true</url><title>Anonymous Narration Feed</title><link>https://surly-16.github.io/js-audio-feed/</link></image><item><title>Creating Self Documenting Agent Systems For Regulatory Compliance</title><enclosure url="https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Media//creating_self_documenting_agent_systems_for_regulatory_compliance.mp3" length="4393773" type="audio/mpeg" /><guid>creating_self_documenting_agent_systems_for_regulatory_compliance</guid><pubDate>Sun, 15 Jun 2025 00:21:31 +1000</pubDate><description>Narrated episode: Creating Self Documenting Agent Systems For Regulatory Compliance
+<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0"><channel><title>Anonymous Narration Feed</title><link>https://surly-16.github.io/js-audio-feed/</link><description>Strategic narrated content on AI, banking, and innovation</description><language>en-au</language><itunes:explicit>no</itunes:explicit><itunes:image href="https://github.com/surly-16/js-audio-feed/blob/main/Cover.png?raw=true" /><image><url>https://github.com/surly-16/js-audio-feed/blob/main/Cover.png?raw=true</url><title>Anonymous Narration Feed</title><link>https://surly-16.github.io/js-audio-feed/</link></image><item><title>Prompt Versioning Strategies For Auditable Ai Systems</title><enclosure url="https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Media//prompt_versioning_strategies_for_auditable_ai_systems.mp3" length="4877613" type="audio/mpeg" /><guid>prompt_versioning_strategies_for_auditable_ai_systems</guid><pubDate>Sun, 15 Jun 2025 00:30:04 +1000</pubDate><description>Narrated episode: Prompt Versioning Strategies For Auditable Ai Systems
 
-Here's the thing about compliance documentation in banking—it's not just about ticking boxes anymore. When we're deploying AI agents across risk assessment, fraud detection, and customer service workflows, we need systems that explain themselves in real-time. Not after an audit. Not when something breaks. But continuously, as they operate.
-
-Let me paint you a picture of what we're building at the bank. Last quarter, our risk team was spending forty percent of their time documenting model decisions for regulatory reviews. Forty percent. That's not sustainable when you're trying to scale AI initiatives across multiple business units.
-
-So we flipped the problem. Instead of documenting what our agents did after the fact, we built them to document themselves as they work. Every decision, every data point considered, every confidence threshold—captured automatically in a format that both our risk analysts and APRA reviewers can understand.
+Picture this: your risk team just spent three hours debugging why their AI system flagged legitimate transactions as suspicious. The culprit? Someone updated a prompt two weeks ago, and nobody knows what changed or why. Sound familiar? This is exactly why prompt versioning isn't just nice to have—it's critical infrastructure for auditable AI systems.
 
 
 
-The core concept is straightforward but powerful. Self-documenting agents maintain three parallel streams of information. First, the operational stream—that's your actual work getting done. Second, the decision stream—capturing why each choice was made. And third, the compliance stream—mapping every action back to specific regulatory requirements.
-
-Think of it like having a court reporter built into every AI system. But smarter. Because these agents don't just record—they structure their documentation to match your compliance frameworks automatically.
-
-Here's a concrete example from our credit decisioning workflow. When an agent evaluates a loan application, it doesn't just output approve or deny. It generates a complete decision tree showing which data points triggered which rules, how those rules map to our responsible lending obligations, and what alternative paths were considered but not taken.
+Let's cut straight to what matters. When we talk about prompt versioning strategies, we're not talking about Git for prompts—though that's part of it. We're talking about creating a complete audit trail that connects every AI decision back to the exact prompt version that generated it. In a regulated environment like banking, this isn't optional. It's the difference between explaining your AI's behavior to a regulator and scrambling through chat logs hoping to reconstruct what happened.
 
 
 
-The technical implementation leverages what I call documentation hooks. These are lightweight functions embedded at every decision point in your agent's logic. They capture context without slowing down processing. We're talking microseconds of overhead for documentation that used to take hours to compile manually.
-
-
-In Python, it looks something like this conceptually. Your agent makes a decision, and immediately logs the inputs, the logic applied, the output, and the regulatory mapping. All structured as JSON that feeds directly into your compliance dashboards.
-
-
-But here's where it gets interesting for enterprise deployment. We've standardized these documentation patterns across all our agent templates. Whether you're building a fraud detection agent or a customer complaint classifier, the self-documentation framework remains consistent. That means our compliance team only needs to learn one system to audit dozens of different AI applications.
+Here's the core concept: every prompt in your system needs three things. A unique identifier, a complete change history, and metadata that captures why each change was made. Think of it like infrastructure as code, but for your AI's instructions. When your fraud detection model suddenly starts flagging more transactions, you need to know if someone tweaked the prompt sensitivity yesterday or if the underlying behavior actually changed.
 
 
 
-The real power shows up in three key areas. First, incident response. When something unexpected happens—and it will—you have a complete forensic trail ready instantly. No scrambling to piece together what happened from scattered logs.
-
-Second, continuous compliance monitoring. Our risk team built dashboards that tap directly into these documentation streams. They can see in real-time if any agent is drifting from its expected behavior patterns or making decisions that might trigger regulatory concern.
-
-Third, and this is crucial, knowledge transfer. When a new team member joins or when we need to explain our systems to regulators, the documentation is already there, structured, searchable, and linked to specific business outcomes.
+Let me break down what this looks like in practice. Imagine your credit assessment team uses an AI agent to review loan applications. That agent uses maybe fifteen different prompts—one for income verification, another for credit history analysis, another for risk scoring. Each prompt evolves based on new regulations, performance feedback, or edge cases you discover. Without versioning, you're flying blind.
 
 
-
-Let me share how this transformed our anti-money laundering workflows. Previously, when our AML agents flagged suspicious transactions, analysts had to manually document why each flag was raised, which rules were triggered, and how the decision aligned with AUSTRAC requirements.
-
-Now, the agent generates a complete compliance package for each flag. It includes the transaction pattern that triggered the alert, similar historical patterns, the specific regulatory rules invoked, and even suggested next steps for the analyst. What used to take thirty minutes per case now takes three.
-
-
-But here's the critical insight—this isn't about replacing human judgment. It's about giving humans better tools to exercise that judgment.
+Start with a simple structure. Each prompt gets a semantic version number—major changes when the output format changes, minor when you're tweaking the logic, patches for typo fixes. Store these in a dedicated repository with clear naming conventions. Something like credit_assessment_income_v2.3.1. But here's where it gets interesting—you need to track which version was active when.
 
 
 
 
-The implementation strategy matters as much as the technology. Start with one high-value, high-visibility workflow. For us, it was credit card fraud detection. Build your self-documenting agent there, prove the value, then expand.
-
-Key implementation steps. First, map your existing compliance requirements to specific agent decision points. Don't try to document everything—focus on decisions that have regulatory impact.
-
-Second, design your documentation schema collaboratively. Get your risk, compliance, and technical teams in the same room. The schema needs to make sense to all of them.
-
-Third, build in validation loops. Your self-documenting agents should flag when they can't adequately explain a decision. That's not a bug—it's a feature that highlights areas needing human review.
+This is where most teams stumble. They version the prompts but forget to link them to actual usage. Every API call, every agent execution, every automated decision needs to log which prompt version it used. In our systems, we embed this directly in the request metadata. When the fraud team asks why a particular transaction was flagged last Tuesday at 3 PM, we can pull up the exact prompt version that was active at that moment.
 
 
 
-
-The technical architecture typically involves three components. A documentation service that provides the logging APIs. A storage layer optimized for compliance queries—we use a combination of structured databases and document stores. And visualization tools that make the documentation accessible to non-technical stakeholders.
-
-
-One pattern that's worked exceptionally well is what we call progressive documentation. Basic decisions get light documentation. Complex or high-stakes decisions trigger deeper documentation requirements. This keeps the system efficient while ensuring critical decisions get the scrutiny they deserve.
+Let's talk implementation. You don't need complex infrastructure to start. A simple JSON schema works wonders. Each prompt becomes an object with fields for version, content, author, timestamp, and crucially, a change rationale. That last field is gold during audits. When a regulator asks why you modified your anti-money laundering prompts six months ago, you have a clear, documented reason.
 
 
-
-Now, let's talk about the challenges you'll face. First, performance overhead. Yes, self-documentation adds processing time. In our testing, it's typically two to five percent. For the value gained, that's acceptable. But you need to architect carefully to minimize impact.
-
-Second, storage costs. Comprehensive documentation generates data. Lots of it. Plan for this. We implemented intelligent archiving that moves older documentation to cheaper storage while keeping recent decisions readily accessible.
-
-Third, and this is subtle but important, documentation fatigue. If your agents generate too much documentation, it becomes noise. Focus on decision documentation, not process documentation. The difference matters.
-
-
-
-The governance implications are profound. Self-documenting agents shift compliance from a reactive to a proactive stance. Instead of preparing for audits, you're always audit-ready. Instead of investigating incidents after the fact, you can often prevent them by monitoring decision patterns in real-time.
-
-We've seen our regulatory response times drop by seventy percent. When APRA asks about a specific decision or pattern, we can pull comprehensive documentation in minutes, not weeks.
-
-But perhaps more importantly, it's changed how our teams think about AI deployment. Compliance isn't a hurdle anymore—it's built into the development process. Teams actually want to use the self-documentation features because it makes their lives easier.
-
-
-
-Looking at the strategic impact, self-documenting agents enable something we couldn't do before—true algorithmic accountability at scale. Every AI decision in our bank can be traced, explained, and justified. That's not just good for compliance. It's good for business.
-
-Customer trust increases when you can explain decisions. Employee confidence grows when they understand how their AI tools work. And regulatory relationships improve when you demonstrate this level of operational transparency.
-
-
-The competitive advantage isn't just in having AI agents. It's in having AI agents you can trust, explain, and continuously improve based on their own documentation.
+Here's a practical example from our lending operations. We maintain a prompt registry—essentially a lightweight database that stores all prompt versions. When an agent needs a prompt, it doesn't hardcode it. It calls the registry with a prompt ID and gets back the current active version. But here's the key—it also logs that retrieval. Transaction ID, timestamp, prompt version used. This creates an unbreakable chain of custody.
 
 
 
 
-So where do you start? Pick a workflow where documentation is currently painful. Build a proof of concept that captures just the essential decision points. Show the value to both your operational teams and your compliance function. Then iterate and expand.
+Now, let's address the elephant in the room. Performance. Yes, adding versioning introduces a lookup step. In our testing, we're talking about 10-15 milliseconds of latency. For real-time fraud detection, that might matter. For loan processing or risk assessment? It's negligible compared to the audit trail benefits. Plus, you can cache active versions locally and sync periodically.
 
-Remember, perfect documentation isn't the goal. Useful documentation is. Focus on capturing information that helps humans make better decisions, respond to incidents faster, and demonstrate compliance more easily.
 
-The future of banking AI isn't just intelligent—it's intelligible. And that makes all the difference when you're operating in a regulated environment where every decision matters.
 
-Self-documenting agents aren't just a technical solution. They're a strategic enabler for scaling AI across your enterprise while maintaining the trust and transparency that banking demands. Start small, prove value, then scale with confidence.</description><link>https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Media//creating_self_documenting_agent_systems_for_regulatory_compliance.txt</link></item><item><title>Designing Adaptive Prompt Libraries For Cross Domain Banking Applications</title><enclosure url="https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Media//designing_adaptive_prompt_libraries_for_cross_domain_banking_applications.mp3" length="4541421" type="audio/mpeg" /><guid>designing_adaptive_prompt_libraries_for_cross_domain_banking_applications</guid><pubDate>Sat, 14 Jun 2025 23:23:05 +1000</pubDate><description>Narrated episode: Designing Adaptive Prompt Libraries For Cross Domain Banking Applications</description><link>https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Media//designing_adaptive_prompt_libraries_for_cross_domain_banking_applications.txt</link></item><item><title>Creating Reusable Agent Templates For Cross Functional Banking Workflow</title><enclosure url="https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Media//creating_reusable_agent_templates_for_cross_functional_banking_workflow.mp3" length="6503277" type="audio/mpeg" /><guid>creating_reusable_agent_templates_for_cross_functional_banking_workflow</guid><pubDate>Sat, 14 Jun 2025 22:52:29 +1000</pubDate><description>Narrated episode: Creating Reusable Agent Templates For Cross Functional Banking Workflow</description><link>https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Media//creating_reusable_agent_templates_for_cross_functional_banking_workflow.txt</link></item><item><title>Creating Reusable Agent Templates For Cross Functional Banking Workflows</title><enclosure url="https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Media//creating_reusable_agent_templates_for_cross_functional_banking_workflows.mp3" length="2679021" type="audio/mpeg" /><guid>creating_reusable_agent_templates_for_cross_functional_banking_workflows</guid><pubDate>Sat, 14 Jun 2025 21:48:46 +1000</pubDate><description>Narrated episode: Creating Reusable Agent Templates For Cross Functional Banking Workflows</description><link>https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Media//creating_reusable_agent_templates_for_cross_functional_banking_workflows.txt</link></item><item><title>Designing Optimal Agent Architectures For Scalable Ai Workflows</title><enclosure url="https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Media//designing_optimal_agent_architectures_for_scalable_ai_workflows.mp3" length="2987949" type="audio/mpeg" /><guid>designing_optimal_agent_architectures_for_scalable_ai_workflows</guid><pubDate>Sat, 14 Jun 2025 21:29:40 +1000</pubDate><description>Narrated episode: Designing Optimal Agent Architectures For Scalable Ai Workflows</description><link>https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Media//designing_optimal_agent_architectures_for_scalable_ai_workflows.txt</link></item><item><title>Ssml Output</title><enclosure url="https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Media//ssml_output.mp3" length="1006317" type="audio/mpeg" /><guid>ssml_output</guid><pubDate>Sat, 14 Jun 2025 21:10:35 +1000</pubDate><description>Narrated episode: Ssml Output</description><link>https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Media//ssml_output.txt</link></item></channel></rss>
+The real power comes from deployment strategies. We use a blue-green approach for prompt updates. New versions get deployed to a subset of transactions first. We monitor performance metrics—accuracy, false positive rates, processing time. Only after validation does the new version become primary. The old version stays accessible for rollback and comparison. This isn't just about safety—it's about continuous improvement with confidence.
+
+
+Think about what this enables for your risk teams.
+
+They can A/B test prompt variations on historical data. They can trace any anomaly back to specific prompt changes. They can demonstrate to auditors exactly how their AI systems evolved in response to new threats or regulations. This isn't theoretical—we've used this exact approach to reduce false positives in transaction monitoring by 30% while maintaining full audit compliance.
+
+
+
+Let me share a concrete workflow we've implemented. Every Monday, our risk analytics team reviews prompt performance metrics from the previous week. They identify underperforming prompts based on accuracy thresholds we've set. They propose modifications in a structured format—current version, proposed change, expected impact, testing criteria. These go through a review process, just like code changes. Once approved, they're deployed to our staging environment where they run against a sample of real transactions in shadow mode.
+
+
+The beauty is in the rollback capability. Last month, we updated our customer verification prompts to be more stringent. Within two days, we saw legitimate customer complaints spike. Because every interaction was tagged with the prompt version, we could quickly identify the issue, rollback to the previous version, and analyze what went wrong. The entire process took less than an hour, with full documentation for compliance.
+
+
+
+
+Here's something most teams miss—prompt versioning isn't just about the prompts themselves. It's about the entire context. We version our prompt templates, our variable definitions, even our output parsing rules. When you change how you interpret an AI's response, that's as significant as changing the prompt itself. Our system treats these as linked artifacts. Change one, and you need to version the entire chain.
+
+
+
+For cross-functional teams, we've implemented role-based access controls on prompt modifications. Risk analysts can propose changes, but only approved prompt engineers can deploy to production. Every change requires a ticket with business justification. This might sound like overhead, but it's saved us countless hours of debugging and compliance headaches. When everyone can modify prompts ad-hoc, you get chaos. When you have process, you get reliability.
+
+
+
+Let's talk about testing strategies. Before any prompt goes live, it runs through our validation pipeline. We maintain a golden dataset—hundreds of examples with known correct outputs. New prompt versions must match or exceed the performance of current versions on this dataset. But here's the nuance—we also track edge cases separately. A prompt might perform well overall but fail on specific scenarios that matter for compliance.
+
+
+We've learned to version our test cases too. As regulations change, what constitutes a correct output evolves. By versioning our test data alongside our prompts, we maintain a complete picture of how our systems adapted over time. This has been invaluable during regulatory reviews.
+
+
+
+
+The metadata story deserves special attention. Beyond version numbers and change reasons, we track performance metrics for each version. Response time, token usage, accuracy scores, user feedback ratings. This creates a rich dataset for optimization. We can ask questions like: which prompt versions performed best for high-value transactions? When did we see accuracy improvements, and what changes drove them?
+
+
+
+Integration with existing systems is surprisingly straightforward. Most teams already have CI/CD pipelines for code. We treat prompts the same way. Check in changes to version control, run automated tests, deploy through environments. The main addition is the runtime logging—making sure every prompt execution is tracked. We use a simple middleware layer that intercepts AI calls and adds versioning metadata.
+
+
+Here's what this means strategically.
+
+Prompt versioning transforms AI from a black box into an auditable system. Your compliance team can trace any decision. Your risk team can experiment safely. Your operations team can rollback quickly. It's not about adding bureaucracy—it's about enabling innovation with confidence.
+
+
+
+Looking at the bigger picture, prompt versioning is really about operational maturity. Early-stage AI implementations hardcode prompts and hope for the best. Mature implementations treat prompts as critical business logic that needs the same rigor as any other code. The banks that get this right will be able to scale AI across departments while maintaining trust and compliance.
+
+
+
+One final thought—start simple. You don't need a perfect system on day one. Begin by versioning your most critical prompts. Add basic logging. Build the muscle memory of treating prompts as versionable artifacts. As you see the benefits, expand the system. The teams that start this journey now will have a massive advantage as AI becomes more central to banking operations.
+
+
+
+The path forward is clear. Implement basic versioning. Add comprehensive logging. Build deployment pipelines. Create feedback loops. This isn't just about compliance—it's about building AI systems that learn and improve while maintaining complete accountability. In a world where AI decisions impact real customers and real money, anything less is simply not acceptable.</description><link>https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Media//prompt_versioning_strategies_for_auditable_ai_systems.txt</link></item><item><title>Creating Self Documenting Agent Systems For Regulatory Compliance</title><enclosure url="https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Media//creating_self_documenting_agent_systems_for_regulatory_compliance.mp3" length="4393773" type="audio/mpeg" /><guid>creating_self_documenting_agent_systems_for_regulatory_compliance</guid><pubDate>Sun, 15 Jun 2025 00:21:31 +1000</pubDate><description>Narrated episode: Creating Self Documenting Agent Systems For Regulatory Compliance</description><link>https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Media//creating_self_documenting_agent_systems_for_regulatory_compliance.txt</link></item><item><title>Designing Adaptive Prompt Libraries For Cross Domain Banking Applications</title><enclosure url="https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Media//designing_adaptive_prompt_libraries_for_cross_domain_banking_applications.mp3" length="4541421" type="audio/mpeg" /><guid>designing_adaptive_prompt_libraries_for_cross_domain_banking_applications</guid><pubDate>Sat, 14 Jun 2025 23:23:05 +1000</pubDate><description>Narrated episode: Designing Adaptive Prompt Libraries For Cross Domain Banking Applications</description><link>https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Media//designing_adaptive_prompt_libraries_for_cross_domain_banking_applications.txt</link></item><item><title>Creating Reusable Agent Templates For Cross Functional Banking Workflow</title><enclosure url="https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Media//creating_reusable_agent_templates_for_cross_functional_banking_workflow.mp3" length="6503277" type="audio/mpeg" /><guid>creating_reusable_agent_templates_for_cross_functional_banking_workflow</guid><pubDate>Sat, 14 Jun 2025 22:52:29 +1000</pubDate><description>Narrated episode: Creating Reusable Agent Templates For Cross Functional Banking Workflow</description><link>https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Media//creating_reusable_agent_templates_for_cross_functional_banking_workflow.txt</link></item><item><title>Creating Reusable Agent Templates For Cross Functional Banking Workflows</title><enclosure url="https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Media//creating_reusable_agent_templates_for_cross_functional_banking_workflows.mp3" length="2679021" type="audio/mpeg" /><guid>creating_reusable_agent_templates_for_cross_functional_banking_workflows</guid><pubDate>Sat, 14 Jun 2025 21:48:46 +1000</pubDate><description>Narrated episode: Creating Reusable Agent Templates For Cross Functional Banking Workflows</description><link>https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Media//creating_reusable_agent_templates_for_cross_functional_banking_workflows.txt</link></item><item><title>Designing Optimal Agent Architectures For Scalable Ai Workflows</title><enclosure url="https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Media//designing_optimal_agent_architectures_for_scalable_ai_workflows.mp3" length="2987949" type="audio/mpeg" /><guid>designing_optimal_agent_architectures_for_scalable_ai_workflows</guid><pubDate>Sat, 14 Jun 2025 21:29:40 +1000</pubDate><description>Narrated episode: Designing Optimal Agent Architectures For Scalable Ai Workflows</description><link>https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Media//designing_optimal_agent_architectures_for_scalable_ai_workflows.txt</link></item><item><title>Ssml Output</title><enclosure url="https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Media//ssml_output.mp3" length="1006317" type="audio/mpeg" /><guid>ssml_output</guid><pubDate>Sat, 14 Jun 2025 21:10:35 +1000</pubDate><description>Narrated episode: Ssml Output</description><link>https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Media//ssml_output.txt</link></item></channel></rss>
