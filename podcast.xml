@@ -9,10 +9,22 @@
 
     <item>
       <title>Designing Agent Architectures</title>
-      <enclosure url="https://onedrive.live.com/download?resid=YOUR_FILE_ID" length="1234567" type="audio/mpeg"/>
+      <enclosure url="https://onedrive.live.com/download?resid=YOUR_FILE_ID"
+                 length="1234567"
+                 type="audio/mpeg"/>
       <guid>agent-arch-001</guid>
       <pubDate>Sat, 14 Jun 2025 09:00:00 +1000</pubDate>
       <description>Exploring how agent-based systems transform banking risk management.</description>
+    </item>
+
+    <item>
+      <title>Ssml Output</title>
+      <enclosure url="https://raw.githubusercontent.com/surly-16/js-audio-feed/main/ssml_output.mp3"
+                 length="987654"
+                 type="audio/mpeg"/>
+      <guid>ssml-output</guid>
+      <pubDate>Sat, 14 Jun 2025 21:00:00 +1000</pubDate>
+      <description>Narrated SSML output from the local pipeline.</description>
     </item>
   </channel>
 </rss>
