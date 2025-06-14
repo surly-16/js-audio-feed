@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0"><channel><title>Leadership and Transformation Feed</title><link>https://surly-16.github.io/js-audio-feed/Leadership%20and%20Transformation/</link><description>Narrated episodes on Leadership and Transformation</description><language>en-au</language><itunes:explicit>no</itunes:explicit><itunes:image href="https://raw.githubusercontent.com/surly-16/js-audio-feed/refs/heads/main/Leadership%20and%20Transformation/Cover.png" /><image><url>https://raw.githubusercontent.com/surly-16/js-audio-feed/refs/heads/main/Leadership%20and%20Transformation/Cover.png</url><title>Leadership and Transformation Feed</title><link>https://surly-16.github.io/js-audio-feed/Leadership%20and%20Transformation/</link></image><item><title>009 Building Ai Product Management Competencies</title><guid>009_building_ai_product_management_competencies</guid><pubDate>Sun, 15 Jun 2025 04:18:28 +1000</pubDate><enclosure url="https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Leadership%20and%20Transformation/media/009_building_ai_product_management_competencies.mp3" length="5512749" type="audio/mpeg" /><description>Narrated episode: 009 Building Ai Product Management Competencies
+
+Right now, your bank is sitting on a goldmine of process data, but your teams are still building Excel macros while competitors deploy AI at scale. The gap isn't technical capability—it's product management competency specifically designed for AI initiatives in regulated environments.
+
+Here's what I've learned leading AI transformation at one of Australia's big four: traditional product management breaks down when you're dealing with probabilistic systems that need to satisfy both APRA's CPS 230 requirements and your risk committee's appetite for innovation.
+
+Let me share a framework that's helped us move from proof-of-concepts to production AI across credit decisioning, fraud detection, and operational risk monitoring.
+
+
+
+First, understand that AI product management in banking isn't about chasing the latest models. It's about building trust through transparency. When CommBank launched their AI Factory, they didn't start with complex neural networks—they began with interpretable models that risk teams could audit. That's your entry point.
+
+Think of it this way: you're not replacing your risk analysts' judgment; you're amplifying their capacity. One of our credit risk models processes 10,000 applications daily, but every decision traces back to explainable features that align with our credit policy. The product manager's job? Ensuring that traceability exists before a single line of code gets written.
+
+
+
+The competency stack looks different than traditional software. Yes, you need user stories and acceptance criteria, but you also need data lineage documentation, model performance thresholds, and drift monitoring specifications. When ASIC reviews your AI systems under Report 798 guidelines, they're not asking about your sprint velocity—they're asking how you detect when your model's assumptions no longer hold.
+
+Here's a practical example: we recently deployed an invoice processing model for our commercial lending team. The traditional approach would focus on accuracy metrics. But the AI product approach? We built in performance monitoring that alerts when invoice formats change significantly, triggering human review. That's the difference—you're managing a living system, not a static feature.
+
+
+
+
+Let's talk about stakeholder management, because this is where most AI initiatives fail in banks. Your stakeholders aren't just business users—they're risk partners, compliance officers, model validators, and internal audit. Each group speaks a different language, and you're the translator.
+
+
+I learned this the hard way when presenting our first customer churn model. The data scientists were excited about the AUC score. Marketing wanted to know about campaign lift. But risk? They wanted to understand false positive impacts on customer experience and potential discrimination risks. The AI product manager synthesizes these perspectives into actionable requirements.
+
+
+
+The technical competencies matter, but not in the way you might think. You don't need to code neural networks, but you must understand enough to challenge assumptions. When a data scientist says "we need more data," you should know to ask: "Will more data reduce our model's bias, improve edge case handling, or just overfit to historical patterns?"
+
+This knowledge gap is where your process improvement background becomes invaluable. Remember DMAIC from Six Sigma? Apply that thinking to model development. Define isn't just about business requirements—it's about fairness metrics and regulatory constraints. Measure includes not just model accuracy but also computational cost and latency requirements for real-time systems.
+
+
+
+Here's something Westpac discovered when they reported 200 million in annual productivity gains from AI: the biggest wins came from mundane processes, not moonshot projects. Their document processing AI doesn't use cutting-edge transformers—it uses proven OCR with rule-based validation. But it processes mortgage documents 80% faster while maintaining compliance standards.
+
+That's the insight: AI product success in banking comes from finding the intersection of technical feasibility, regulatory acceptability, and meaningful business impact.
+
+Your role is orchestrating this intersection. When building our anti-money laundering monitoring system, we could have implemented state-of-the-art graph neural networks. Instead, we chose interpretable decision trees that our compliance team could explain to AUSTRAC. The result? Fewer false positives, faster investigations, and a system that passed regulatory scrutiny on first review.
+
+
+
+
+The implementation pathway starts with picking the right pilot. Look for processes with clear rules but high variation—think customer complaint categorization or transaction anomaly detection. These have enough complexity to demonstrate AI value but sufficient structure to manage risk.
+
+
+Build your MLOps foundation early. This isn't just about model deployment—it's about creating feedback loops between production performance and model retraining. Our fraud detection system automatically flags transactions for human review when confidence drops below threshold. Those reviews become training data, creating a virtuous cycle of improvement.
+
+But here's what most frameworks miss: change management for AI is fundamentally different. You're not just changing processes; you're changing how people think about decision-making. When we introduced AI-assisted credit scoring, loan officers initially saw it as job replacement. We repositioned it as decision support that helps them focus on complex cases while AI handles routine approvals.
+
+
+
+The governance structure needs special attention in banking. Create an AI ethics committee early—before you need it. Include diverse voices: risk, compliance, customer advocacy, and yes, front-line staff who'll use these systems daily. This committee doesn't just review models; they establish principles that guide development.
+
+CBA's approach is instructive here. Their AI principles aren't just corporate values—they're operational guardrails. Every model includes a fairness assessment. Every deployment requires an explainability plan. Every production system has a human override mechanism. These aren't nice-to-haves; they're table stakes for regulatory approval.
+
+
+
+Let me share a recent win that illustrates these principles in action. Our retail banking team needed to improve home loan processing times. The traditional approach would automate document collection. The AI approach? We built a system that predicts which documents customers are likely to have issues with, proactively providing guidance before they apply.
+
+The product management challenge wasn't technical—it was organizational. We needed buy-in from credit policy to adjust documentation requirements based on model confidence. We needed IT security to approve real-time API calls to external verification services. We needed legal to sign off on dynamic customer communications.
+
+This orchestration—technical, regulatory, and organizational—is the core competency of AI product management in banking.
+
+
+
+The measurement framework evolves too. Traditional KPIs like processing time still matter, but add model-specific metrics: drift detection rates, explainability scores, fairness indicators across customer segments. Our executive dashboard now shows not just loan approval rates but also model confidence distributions and demographic parity metrics.
+
+This transparency builds trust. When our board sees that our AI systems actively monitor for bias, they're more willing to approve expanded use cases. When regulators see our drift detection catching data quality issues before they impact customers, they're more comfortable with our innovation agenda.
+
+
+
+
+The skills development path is clear but demanding. Start with foundational AI literacy—understand supervised versus unsupervised learning, classification versus regression, training versus inference. But quickly move to banking-specific applications: credit scoring models, fraud detection patterns, operational risk indicators.
+
+
+Partner with your model risk management team early. They're not obstacles; they're your guides to production deployment. Learn their validation frameworks. Understand their documentation requirements. When you bring them a well-structured model development plan that addresses their concerns upfront, approval processes accelerate dramatically.
+
+Build bridges between your Six Sigma background and AI implementation. Control charts become model monitoring dashboards. FMEA analysis extends to AI failure modes. Root cause analysis includes feature importance evaluation. This translation helps traditional risk managers understand AI risks in familiar terms.
+
+
+
+The competitive advantage isn't in having AI—every bank has pilots running. It's in scaling AI responsibly and rapidly. ANZ learned this with their customer service chatbot. Version one was a disaster—rigid responses frustrated customers. Version two incorporated continuous learning from service interactions, improving satisfaction while reducing call volumes.
+
+The product manager's role in that transformation? Creating feedback mechanisms that captured not just technical performance but customer sentiment, operational efficiency, and compliance adherence. They built dashboards that showed conversation flow patterns, enabling rapid iteration while maintaining regulatory oversight.
+
+
+
+Looking ahead, the biggest opportunity lies in composite AI systems—combining multiple models to solve complex problems. Imagine credit decisioning that integrates transaction analysis, document verification, and behavioral prediction into a unified workflow. The product management complexity multiplies, but so does the value.
+
+Your process improvement lens becomes crucial here. Map the end-to-end journey. Identify where AI adds value versus where human judgment remains essential. Design handoffs that feel seamless to users while maintaining audit trails for regulators.
+
+
+
+The transformation from traditional product owner to AI product leader isn't about learning to code—it's about learning to think probabilistically while operating deterministically.
+
+You're building systems that must be accurate enough to create value, transparent enough to build trust, and robust enough to handle edge cases that could create regulatory exposure. It's a balance few product managers have mastered, which makes this skillset incredibly valuable in today's banking environment.
+
+Start small, document everything, and remember: in regulated environments, the fastest path to scale is through trust, not technology. Build that trust through transparent AI products that enhance human decision-making, and you'll find doors opening to transformative opportunities that your competitors are still too risk-averse to pursue.</description></item><item><title>007 From Process Improvement To Ai Leadership</title><guid>007_from_process_improvement_to_ai_leadership</guid><pubDate>Sun, 15 Jun 2025 04:18:12 +1000</pubDate><enclosure url="https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Leadership%20and%20Transformation/media/007_from_process_improvement_to_ai_leadership.mp3" length="5959725" type="audio/mpeg" /><description>Narrated episode: 007 From Process Improvement To Ai Leadership</description></item><item><title>006 Crisis Management And Ai System Resilience</title><guid>006_crisis_management_and_ai_system_resilience</guid><pubDate>Sun, 15 Jun 2025 04:17:44 +1000</pubDate><enclosure url="https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Leadership%20and%20Transformation/media/006_crisis_management_and_ai_system_resilience.mp3" length="5826285" type="audio/mpeg" /><description>Narrated episode: 006 Crisis Management And Ai System Resilience</description></item><item><title>008 Applying Six Sigma And Lean To Ai Projects</title><guid>008_applying_six_sigma_and_lean_to_ai_projects</guid><pubDate>Sun, 15 Jun 2025 04:17:36 +1000</pubDate><enclosure url="https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Leadership%20and%20Transformation/media/008_applying_six_sigma_and_lean_to_ai_projects.mp3" length="3869037" type="audio/mpeg" /><description>Narrated episode: 008 Applying Six Sigma And Lean To Ai Projects</description></item><item><title>005 Building Ai Native Risk Organizations</title><guid>005_building_ai_native_risk_organizations</guid><pubDate>Sun, 15 Jun 2025 04:16:25 +1000</pubDate><enclosure url="https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Leadership%20and%20Transformation/media/005_building_ai_native_risk_organizations.mp3" length="4761837" type="audio/mpeg" /><description>Narrated episode: 005 Building Ai Native Risk Organizations</description></item><item><title>003 Executive Communication For Ai Initiatives</title><guid>003_executive_communication_for_ai_initiatives</guid><pubDate>Sun, 15 Jun 2025 04:16:01 +1000</pubDate><enclosure url="https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Leadership%20and%20Transformation/media/003_executive_communication_for_ai_initiatives.mp3" length="5424813" type="audio/mpeg" /><description>Narrated episode: 003 Executive Communication For Ai Initiatives</description></item><item><title>002 Building Ai Buy In From Risk Teams</title><guid>002_building_ai_buy_in_from_risk_teams</guid><pubDate>Sun, 15 Jun 2025 04:15:55 +1000</pubDate><enclosure url="https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Leadership%20and%20Transformation/media/002_building_ai_buy_in_from_risk_teams.mp3" length="5257773" type="audio/mpeg" /><description>Narrated episode: 002 Building Ai Buy In From Risk Teams</description></item><item><title>004 Cross Functional Ai Team Building</title><guid>004_cross_functional_ai_team_building</guid><pubDate>Sun, 15 Jun 2025 04:15:42 +1000</pubDate><enclosure url="https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Leadership%20and%20Transformation/media/004_cross_functional_ai_team_building.mp3" length="4460013" type="audio/mpeg" /><description>Narrated episode: 004 Cross Functional Ai Team Building</description></item><item><title>001 Ai Success Stories From Australian Banks</title><guid>001_ai_success_stories_from_australian_banks</guid><pubDate>Sun, 15 Jun 2025 04:15:21 +1000</pubDate><enclosure url="https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Leadership%20and%20Transformation/media/001_ai_success_stories_from_australian_banks.mp3" length="4995693" type="audio/mpeg" /><description>Narrated episode: 001 Ai Success Stories From Australian Banks</description></item></channel></rss>

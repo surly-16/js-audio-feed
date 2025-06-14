@@ -1,126 +1,72 @@
 <?xml version='1.0' encoding='utf-8'?>
-<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0"><channel><title>Governance, Value and Strategy Feed</title><link>https://surly-16.github.io/js-audio-feed/Governance,%20Value%20and%20Strategy/</link><description>Narrated episodes on Governance, Value and Strategy</description><language>en-au</language><itunes:explicit>no</itunes:explicit><itunes:image href="https://github.com/surly-16/js-audio-feed/blob/main/Governance,%20Value%20and%20Strategy/cover.png?raw=true" /><image><url>https://github.com/surly-16/js-audio-feed/blob/main/Governance,%20Value%20and%20Strategy/cover.png?raw=true</url><title>Governance, Value and Strategy Feed</title><link>https://surly-16.github.io/js-audio-feed/Governance,%20Value%20and%20Strategy/</link></image><item><title>004 Risk Based Ai Roadmap Development</title><guid>004_risk_based_ai_roadmap_development</guid><pubDate>Sun, 15 Jun 2025 03:36:42 +1000</pubDate><enclosure url="https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Governance,%20Value%20and%20Strategy/media/004_risk_based_ai_roadmap_development.mp3" length="5001069" type="audio/mpeg" /><description>Narrated episode: 004 Risk Based Ai Roadmap Development
+<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0"><channel><title>Governance, Value and Strategy Feed</title><link>https://surly-16.github.io/js-audio-feed/Governance,%20Value%20and%20Strategy/</link><description>Narrated episodes on Governance, Value and Strategy</description><language>en-au</language><itunes:explicit>no</itunes:explicit><itunes:image href="https://raw.githubusercontent.com/surly-16/js-audio-feed/refs/heads/main/Governance,%20Value%20and%20Strategy/Cover.png" /><image><url>https://raw.githubusercontent.com/surly-16/js-audio-feed/refs/heads/main/Governance,%20Value%20and%20Strategy/Cover.png</url><title>Governance, Value and Strategy Feed</title><link>https://surly-16.github.io/js-audio-feed/Governance,%20Value%20and%20Strategy/</link></image><item><title>009 Vendor Risk And Third Party Ai Management</title><guid>009_vendor_risk_and_third_party_ai_management</guid><pubDate>Sun, 15 Jun 2025 04:15:03 +1000</pubDate><enclosure url="https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Governance,%20Value%20and%20Strategy/media/009_vendor_risk_and_third_party_ai_management.mp3" length="5425965" type="audio/mpeg" /><description>Narrated episode: 009 Vendor Risk And Third Party Ai Management
 
-When I joined the bank's AI innovation team eighteen months ago, our risk teams were drowning in manual reviews. Today, they're processing three times the volume with half the effort. The difference? A risk-based roadmap that actually works in production.
+Right now, your bank is probably evaluating or already using AI tools from multiple vendors. Maybe it's a document processing solution from one provider, a customer insights platform from another, and a fraud detection model from a third. Each vendor brings their own risks, their own governance requirements, and their own integration challenges. 
 
-Here's what most organizations get wrong about AI in risk management: they start with the technology, not the process. They buy expensive platforms, hire data scientists, then wonder why adoption stalls. I've watched this pattern repeat across every major Australian bank.
+Here's what keeps me up at night as a Product Owner: we're building dependencies on black-box systems that our risk teams can't fully audit. When APRA drops CPS 230 requirements on us, or when a vendor's model drifts and starts flagging legitimate transactions as fraud, who owns that risk? 
 
-Let me share what actually works.
+Let me share what happened last quarter. We had a vendor's sentiment analysis tool suddenly start misclassifying customer complaints. The model had been retrained on US data without notification. Our complaints team spent three weeks manually reviewing cases before we caught it. That's the reality of third-party AI risk - it's not just about the initial assessment, it's about continuous monitoring. 
 
+Think about your current vendor evaluation process. You probably have a checklist - data security, compliance certifications, SLAs. But are you asking about model interpretability? About drift detection? About how they handle edge cases specific to Australian banking? 
 
+Here's where Lean Six Sigma thinking transforms this challenge. Instead of treating vendor AI as a procurement exercise, we need to treat it as a process control problem. Every third-party model is essentially an uncontrolled variable in your process. 
 
-Start with process maturity, not model complexity. When CBA launched their AI Factory, they didn't begin with neural networks. They mapped every risk process first, identifying where rule-based automation could deliver immediate wins. Think credit memo reviews, transaction monitoring, compliance reporting. These aren't sexy use cases, but they're where you build trust.
+Let me break down our framework. First, we categorize vendors by risk tier. A marketing personalization tool sits in a different tier than a credit decisioning model. For high-risk tiers, we require what I call "glass box" provisions - the ability to inspect model logic, test with our own data, and monitor performance metrics in real-time. 
 
-I learned this running Lean Six Sigma projects before AI was mainstream. You measure baseline performance, identify variation, then systematically improve. AI follows the same discipline, just with different tools.
+CommBank's AI Factory approach offers a blueprint here. They've built internal capabilities specifically to validate and monitor vendor models. When they onboard a new AI vendor, that model goes through their validation pipeline just like an internal model would. They're not just trusting vendor assertions - they're verifying. 
 
+Now, let's talk about the Insight7 framework. They've identified seven critical evaluation criteria for AI vendors: model transparency, data governance, performance monitoring, bias testing, security controls, regulatory alignment, and operational integration. Most banks focus on maybe three of these. That's not enough anymore. 
 
+Here's a practical example. We recently evaluated a customer churn prediction vendor. Their accuracy metrics looked great - 94% precision. But when we dug into their bias testing, we found the model performed poorly for customers over 65 and recent migrants. In the Australian market, that's not just a performance issue - it's a regulatory nightmare waiting to happen. 
 
-Here's our framework for risk-based roadmap development. First, categorize your use cases by regulatory impact. APRA's CPS 230 requirements mean anything touching operational resilience needs extra scrutiny. We use a simple matrix: regulatory sensitivity on one axis, process complexity on the other.
+The Protiviti framework adds another layer - third-party AI governance isn't just about the vendor, it's about your internal processes. Who in your organization can actually validate a vendor's claims about model fairness? Do you have the technical capability to monitor model drift? 
 
-Low complexity, low regulatory risk? That's your starting point. Document verification, data quality checks, report generation. These build confidence while you develop governance frameworks.
+This is where the journey from RPA to AI becomes crucial. Your teams who built Excel macros and Access databases understand process logic. They can learn to ask the right questions about AI vendors. But they need frameworks and tools. 
 
+Here's what we've implemented: a vendor AI risk scorecard that maps directly to APRA's CPS 234 and upcoming CPS 230 requirements. Each vendor gets scored on data lineage, model explainability, and incident response capabilities. But here's the key - we don't just score them once. We have automated monitoring that tracks their API response times, error rates, and output distributions. 
 
+NContracts highlights ten critical tips, but I'll focus on the three that matter most in Australian banking. First, contractual right to audit. Not just their SOC reports - actual model audits. Second, clear escalation paths when models fail. And third, exit strategies that include data deletion and model transition plans. 
 
-Let me give you a concrete example. Our trade surveillance team was manually reviewing thousands of alerts monthly. Most were false positives from outdated rules. Instead of jumping straight to machine learning, we first implemented intelligent filtering using decision trees. Simple, explainable, auditable.
+Let me share a win from last month. Our mortgage team was using a vendor's income verification model. Through our monitoring, we detected the model was struggling with gig economy income - increasingly common in Australia. Because we had the right contractual provisions, we worked with the vendor to retrain the model on Australian gig economy data. Result? 23% improvement in auto-approval rates for self-employed applicants. 
 
-The results? Seventy percent reduction in manual reviews within three months. More importantly, our risk committee understood exactly how it worked. That trust enabled us to progress to more sophisticated models.
+But here's where most banks stumble - they treat vendor management as a compliance exercise rather than a competitive advantage. Your third-party AI ecosystem should be as strategic as your internal capabilities. These vendors are extending your ability to serve customers and manage risk. 
 
+Think about concentration risk differently. It's not just about having too many loans in one sector. It's about having too many critical processes dependent on one AI vendor. What happens if your document processing vendor has an outage during month-end? Or if your fraud detection vendor gets acquired and changes their pricing model? 
 
+We've started mapping vendor dependencies like we map system dependencies. Each AI touchpoint in a customer journey gets tagged with its vendor. Suddenly, you can see that your home loan application process touches six different AI vendors. That's six potential points of failure, six different SLAs to manage, six different model governance frameworks to monitor. 
 
-McKinsey's research on generative AI in risk management highlights something critical: successful implementations focus on augmentation, not replacement. Your risk analysts aren't going anywhere. They're becoming more strategic.
+Here's a tactical approach we've borrowed from manufacturing - supplier scorecards. Every quarter, we score our AI vendors on performance, innovation, and risk. But unlike traditional IT vendors, we include metrics like model drift rate, false positive trends, and time-to-fix for edge cases. 
 
-Think about anti-money laundering investigations. Previously, analysts spent eighty percent of their time gathering data from multiple systems. Now, AI aggregates that information in seconds, presenting it in standardized formats. The analyst focuses on pattern recognition and decision-making.
+The innovation metric is crucial. Is your vendor improving their models? Are they adapting to Australian regulatory changes? We had one vendor whose model hadn't been updated in 18 months. In AI terms, that's ancient. We worked with them to establish a quarterly model refresh cycle, aligned with our own risk reviews. 
 
+ASIC Report 798 makes it clear - you can't outsource accountability. When a vendor's AI makes a decision that impacts a customer, your bank owns that decision. This means your vendor management framework needs teeth. 
 
+We've implemented what I call "kill switches" for high-risk vendor AI. If a model starts behaving erratically, our operations team can revert to manual processing within 15 minutes. It's not elegant, but it's saved us from several potential incidents. 
 
-But here's where many banks stumble: they underestimate the change management required. I've seen technically perfect solutions fail because teams weren't prepared for new workflows.
+Let's talk about the build-versus-buy decision through a risk lens. When Westpac reports productivity gains from their AI initiatives, they're often combining internal capabilities with vendor solutions. The key is knowing which to own and which to outsource. 
 
+Core differentiators - like your credit risk models - you probably want to own. Commodity capabilities - like document OCR - you can vendor. But there's a middle ground - strategic partnerships where you co-develop models with vendors. This gives you the speed of vendor deployment with the control of internal development. 
 
-When Westpac reported forty percent productivity gains from their AI initiatives, they credited extensive training programs. Not just technical training, but process redesign workshops where teams rebuilt their workflows around AI capabilities.
+Here's where process improvement backgrounds shine. You understand variation, control limits, and process capability. Apply these concepts to vendor AI. What's the normal variation in model performance? When does variation become a control issue? How do you detect special cause variation in a black-box model? 
 
+We've started requiring vendors to provide process control charts for their models. Weekly accuracy trends, monthly bias metrics, quarterly performance deep-dives. It's the same rigor we'd apply to any critical process, just adapted for AI. 
 
-We run similar programs, but with a twist. Risk teams design their own automation roadmaps. They know their pain points better than any innovation team. Our role is translating those needs into technical requirements.
+The change management aspect is often overlooked. When you introduce a new vendor AI tool, you're not just changing technology - you're changing how teams work. That credit analyst who used to manually review applications now needs to understand how to interpret AI recommendations and when to override them. 
 
+We've found success with what I call "human-in-the-loop" vendor implementations. Even if the vendor's model can fully automate a decision, we start with human review. This builds trust, helps identify edge cases, and creates a feedback loop for model improvement. 
 
+Looking at CPS 230 operational resilience requirements, third-party AI introduces new challenges. How do you ensure resilience when you don't control the model? We're working with vendors to implement redundancy at the model level - not just infrastructure redundancy, but actual alternative models that can take over if the primary fails. 
 
-Let's talk about the technical architecture that enables this. You need three layers: data foundation, model management, and integration framework.
+The economics matter too. AI vendor pricing models are evolving. Some charge per API call, others by data volume, some want revenue shares. We've learned to model total cost of ownership including the hidden costs - integration effort, monitoring overhead, and the cost of switching if needed. 
 
-Data foundation isn't glamorous, but it's where most initiatives fail. KPMG's AI risk prioritization framework emphasizes data quality as the primary success factor. In banking, that means reconciling legacy systems, standardizing formats, and establishing single sources of truth.
+Here's a framework that's worked for us: treat vendor AI relationships like strategic partnerships, not transactional purchases. Regular business reviews, joint roadmap planning, shared KPIs. When your vendor succeeds, you succeed. When they fail, you have early warning. 
 
-We spent six months just cleaning customer data before deploying our first risk models. Painful? Yes. Necessary? Absolutely. Every model since has benefited from that foundation.
+The data governance aspect is critical. Where is your customer data being processed? Is it leaving Australia? How is it being used to train the vendor's models? We've implemented data residency requirements and regular audits of vendor data practices. APRA is watching this space closely. 
 
+Let me leave you with this: vendor AI management isn't about avoiding risk - it's about intelligent risk-taking. The banks that will win are those that can leverage vendor innovation while maintaining control and compliance. 
 
+Start by auditing your current vendor AI landscape. Map every model, understand every dependency, document every risk. Then build the monitoring and governance frameworks to turn those vendors from risks into strategic assets. 
 
-Model management is where MLOps meets regulatory requirements. ASIC Report 798 on AI governance expects clear documentation of model decisions. That means version control, performance monitoring, and audit trails for every prediction.
+Your process improvement DNA is your advantage here. You know how to measure, monitor, and improve. Apply that rigor to vendor AI, and you'll be ahead of 90% of the market. The frameworks exist - Insight7, Protiviti, NContracts have done the thinking. Your job is to operationalize them in your unique context. 
 
-We use a combination of open-source tools and commercial platforms. MLflow for experiment tracking, Evidently AI for drift detection, and custom dashboards for business metrics. The key is making these accessible to risk teams, not just data scientists.
-
-
-
-Integration is where rubber meets road. Your AI models need to fit seamlessly into existing workflows. That means APIs for real-time scoring, batch processing for periodic reviews, and human-in-the-loop interfaces for complex decisions.
-
-Grant Thornton's research on AI in regulatory compliance shows that integrated systems deliver five times more value than standalone solutions. Our credit risk models feed directly into loan origination systems. Compliance alerts route automatically to investigation queues. No manual handoffs, no data silos.
-
-
-
-Now, let's address the elephant in the room: generative AI. Everyone wants ChatGPT for risk management. Here's my take: start small, stay focused.
-
-We're piloting GenAI for specific use cases: drafting risk assessment summaries, generating compliance narratives, and synthesizing regulatory updates. Each has clear boundaries and human oversight.
-
-The key is treating GenAI as a productivity tool, not a decision-maker. Our risk policies explicitly require human validation for any AI-generated content that impacts customers or regulatory reporting.
-
-
-
-Integrio Systems' ranking of AI use cases puts document processing and regulatory reporting in the top five for financial services. That aligns with our experience. These areas offer quick wins with manageable risk.
-
-But here's what the rankings miss: the compound effect of multiple small improvements. When you automate document extraction, standardize data formats, and streamline workflows, the cumulative impact transforms entire departments.
-
-
-
-Let me share our roadmap template. Phase one: process standardization and data preparation. Three to six months. Focus on cleaning data, documenting workflows, and identifying quick wins.
-
-Phase two: pilot implementations. Six to nine months. Deploy rule-based automation for low-risk processes. Build governance frameworks. Train teams on new tools.
-
-Phase three: scale and sophistication. Nine to eighteen months. Introduce machine learning for pattern recognition. Expand to medium-risk processes. Establish continuous improvement cycles.
-
-Phase four: advanced capabilities. Eighteen months plus. Deploy GenAI for specific use cases. Integrate predictive models into decision-making. Build self-improving systems.
-
-
-
-The timeline seems long, but consider the alternative. I've seen banks spend millions on AI platforms that deliver nothing because they skipped foundational steps. Our approach delivers value every quarter while building toward transformational capabilities.
-
-
-Critical success factors? Executive sponsorship, dedicated funding, and most importantly, risk team ownership. When risk professionals drive their own automation agenda, adoption follows naturally.
-
-
-
-
-Let's talk metrics. Traditional KPIs focus on efficiency: processing time, cost per transaction, error rates. These matter, but miss the bigger picture.
-
-We track risk-adjusted metrics: false positive reduction, regulatory finding prevention, and decision consistency. These demonstrate AI's value in improving risk outcomes, not just operational efficiency.
-
-For example, our transaction monitoring models don't just process more alerts. They identify suspicious patterns human reviewers missed. That's the metric that matters to regulators and executives.
-
-
-
-Common pitfalls to avoid? First, over-engineering solutions. Start simple, iterate based on feedback. Second, ignoring explainability. If risk teams can't understand how models make decisions, they won't trust them.
-
-Third, underestimating maintenance. Models degrade. Data drifts. Regulations change. Budget twenty percent of development effort for ongoing maintenance. It's not optional in regulated environments.
-
-
-
-Looking ahead, I see three trends shaping risk-based AI roadmaps. First, federated learning enabling collaboration without data sharing. Imagine banks collectively improving fraud detection while maintaining data privacy.
-
-Second, automated governance using AI to monitor AI. Meta-models that detect bias, ensure compliance, and flag anomalies in other models' behavior.
-
-Third, natural language interfaces making AI accessible to all risk professionals. No coding required, just conversational queries returning validated, auditable insights.
-
-
-
-Here's my challenge to you: pick one risk process this week. Map its current state. Identify three manual steps that could be automated. Estimate the effort and impact. That's your first roadmap item.
-
-Don't wait for perfect conditions. Don't over-plan. Start where you are, use what you have, do what you can. The banks succeeding with AI aren't the ones with the biggest budgets. They're the ones taking consistent, risk-based steps forward.
-
-Remember, this isn't about replacing human judgment in risk management. It's about amplifying human expertise with intelligent tools. When you get that balance right, you don't just improve efficiency. You fundamentally enhance your organization's ability to identify, assess, and mitigate risk.
-
-That's the real promise of AI in risk management. Not just doing things faster, but doing them better. And with the right roadmap, it's entirely achievable.</description></item><item><title>002 Ai Governance Gaps And Model Risk Management</title><guid>002_ai_governance_gaps_and_model_risk_management</guid><pubDate>Sun, 15 Jun 2025 03:36:03 +1000</pubDate><enclosure url="https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Governance,%20Value%20and%20Strategy/media/002_ai_governance_gaps_and_model_risk_management.mp3" length="4841709" type="audio/mpeg" /><description>Narrated episode: 002 Ai Governance Gaps And Model Risk Management</description></item><item><title>003 Building Compliant Ai Governance Frameworks</title><guid>003_building_compliant_ai_governance_frameworks</guid><pubDate>Sun, 15 Jun 2025 03:35:37 +1000</pubDate><enclosure url="https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Governance,%20Value%20and%20Strategy/media/003_building_compliant_ai_governance_frameworks.mp3" length="3450669" type="audio/mpeg" /><description>Narrated episode: 003 Building Compliant Ai Governance Frameworks</description></item><item><title>001 Navigating Australia S Ai Regulatory Framework</title><guid>001_navigating_australia_s_ai_regulatory_framework</guid><pubDate>Sun, 15 Jun 2025 03:34:59 +1000</pubDate><enclosure url="https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Governance,%20Value%20and%20Strategy/media/001_navigating_australia_s_ai_regulatory_framework.mp3" length="4447149" type="audio/mpeg" /><description>Narrated episode: 001 Navigating Australia S Ai Regulatory Framework</description></item></channel></rss>
+Remember, in the world of third-party AI, trust is good, but verification is essential. Build the capabilities to verify, and you'll build the confidence to innovate.</description></item><item><title>005 Quick Wins Vs Strategic Ai Initiatives</title><guid>005_quick_wins_vs_strategic_ai_initiatives</guid><pubDate>Sun, 15 Jun 2025 04:14:27 +1000</pubDate><enclosure url="https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Governance,%20Value%20and%20Strategy/media/005_quick_wins_vs_strategic_ai_initiatives.mp3" length="6577773" type="audio/mpeg" /><description>Narrated episode: 005 Quick Wins Vs Strategic Ai Initiatives</description></item><item><title>008 Demonstrating Ai Value To Regulators And Stakeholders</title><guid>008_demonstrating_ai_value_to_regulators_and_stakeholders</guid><pubDate>Sun, 15 Jun 2025 04:14:15 +1000</pubDate><enclosure url="https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Governance,%20Value%20and%20Strategy/media/008_demonstrating_ai_value_to_regulators_and_stakeholders.mp3" length="4573101" type="audio/mpeg" /><description>Narrated episode: 008 Demonstrating Ai Value To Regulators And Stakeholders</description></item><item><title>006 Measuring Ai Roi Beyond Cost Savings</title><guid>006_measuring_ai_roi_beyond_cost_savings</guid><pubDate>Sun, 15 Jun 2025 04:12:28 +1000</pubDate><enclosure url="https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Governance,%20Value%20and%20Strategy/media/006_measuring_ai_roi_beyond_cost_savings.mp3" length="429357" type="audio/mpeg" /><description>Narrated episode: 006 Measuring Ai Roi Beyond Cost Savings</description></item><item><title>004 Risk Based Ai Roadmap Development</title><guid>004_risk_based_ai_roadmap_development</guid><pubDate>Sun, 15 Jun 2025 03:36:42 +1000</pubDate><enclosure url="https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Governance,%20Value%20and%20Strategy/media/004_risk_based_ai_roadmap_development.mp3" length="5001069" type="audio/mpeg" /><description>Narrated episode: 004 Risk Based Ai Roadmap Development</description></item><item><title>002 Ai Governance Gaps And Model Risk Management</title><guid>002_ai_governance_gaps_and_model_risk_management</guid><pubDate>Sun, 15 Jun 2025 03:36:03 +1000</pubDate><enclosure url="https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Governance,%20Value%20and%20Strategy/media/002_ai_governance_gaps_and_model_risk_management.mp3" length="4841709" type="audio/mpeg" /><description>Narrated episode: 002 Ai Governance Gaps And Model Risk Management</description></item><item><title>003 Building Compliant Ai Governance Frameworks</title><guid>003_building_compliant_ai_governance_frameworks</guid><pubDate>Sun, 15 Jun 2025 03:35:37 +1000</pubDate><enclosure url="https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Governance,%20Value%20and%20Strategy/media/003_building_compliant_ai_governance_frameworks.mp3" length="3450669" type="audio/mpeg" /><description>Narrated episode: 003 Building Compliant Ai Governance Frameworks</description></item><item><title>001 Navigating Australia S Ai Regulatory Framework</title><guid>001_navigating_australia_s_ai_regulatory_framework</guid><pubDate>Sun, 15 Jun 2025 03:34:59 +1000</pubDate><enclosure url="https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Governance,%20Value%20and%20Strategy/media/001_navigating_australia_s_ai_regulatory_framework.mp3" length="4447149" type="audio/mpeg" /><description>Narrated episode: 001 Navigating Australia S Ai Regulatory Framework</description></item></channel></rss>
