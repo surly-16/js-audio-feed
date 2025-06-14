@@ -1,96 +1,112 @@
 <?xml version='1.0' encoding='utf-8'?>
-<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0"><channel><title>Practical Delivery and Agile AI Feed</title><link>https://surly-16.github.io/js-audio-feed/Practical%20Delivery%20and%20Agile%20AI/</link><description>Narrated episodes on Practical Delivery and Agile AI</description><language>en-au</language><itunes:explicit>no</itunes:explicit><itunes:image href="https://raw.githubusercontent.com/surly-16/js-audio-feed/refs/heads/main/Practical%20Delivery%20and%20Agile%20AI/Cover.png" /><image><url>https://raw.githubusercontent.com/surly-16/js-audio-feed/refs/heads/main/Practical%20Delivery%20and%20Agile%20AI/Cover.png</url><title>Practical Delivery and Agile AI Feed</title><link>https://surly-16.github.io/js-audio-feed/Practical%20Delivery%20and%20Agile%20AI/</link></image><item><title>001 Running Ai Experiments In Risk Management Squads</title><guid>001_running_ai_experiments_in_risk_management_squads</guid><pubDate>Sun, 15 Jun 2025 04:13:09 +1000</pubDate><enclosure url="https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Practical%20Delivery%20and%20Agile%20AI/media/001_running_ai_experiments_in_risk_management_squads.mp3" length="5599917" type="audio/mpeg" /><description>Narrated episode: 001 Running Ai Experiments In Risk Management Squads
+<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0"><channel><title>Practical Delivery and Agile AI Feed</title><link>https://surly-16.github.io/js-audio-feed/Practical%20Delivery%20and%20Agile%20AI/</link><description>Narrated episodes on Practical Delivery and Agile AI</description><language>en-au</language><itunes:explicit>no</itunes:explicit><itunes:image href="https://raw.githubusercontent.com/surly-16/js-audio-feed/refs/heads/main/Practical%20Delivery%20and%20Agile%20AI/Cover.png" /><image><url>https://raw.githubusercontent.com/surly-16/js-audio-feed/refs/heads/main/Practical%20Delivery%20and%20Agile%20AI/Cover.png</url><title>Practical Delivery and Agile AI Feed</title><link>https://surly-16.github.io/js-audio-feed/Practical%20Delivery%20and%20Agile%20AI/</link></image><item><title>008 Measuring Success In Early Stage Ai Squads</title><guid>008_measuring_success_in_early_stage_ai_squads</guid><pubDate>Sun, 15 Jun 2025 04:25:35 +1000</pubDate><enclosure url="https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Practical%20Delivery%20and%20Agile%20AI/media/008_measuring_success_in_early_stage_ai_squads.mp3" length="5109549" type="audio/mpeg" /><description>Narrated episode: 008 Measuring Success In Early Stage Ai Squads
 
-You've probably noticed how every risk management squad is suddenly being asked about AI. Not blockchain this time—actual AI that needs to work in production. Here's what I've learned leading these initiatives at one of Australia's major banks: the teams that succeed aren't the ones with the best models. They're the ones who understand how to run experiments inside a regulated environment.
-
-Let me paint you a picture. Last quarter, our credit risk team wanted to test an AI model for early warning signals. Traditional approach? Six-month project, steering committees, full business case. What we did instead? Ran a two-week experiment using existing data, cloud notebooks, and a simple success metric. The twist? We built the compliance framework first, then the model.
+Right now, your AI squad is probably drowning in metrics that don't matter. I've watched teams track model accuracy to three decimal places while their business sponsors quietly pull funding because they can't see the value. Let me share what actually moves the needle when you're building AI capabilities in a regulated environment.
 
 
 
-Think about your current risk processes. You've got analysts running SQL queries, building Excel models, maybe some Python scripts. They know the domain cold. What they don't know is how to turn that expertise into scalable AI systems that pass APRA scrutiny. That's where experimentation frameworks come in.
-
-
-Here's the framework we use. First principle: every AI experiment must have a clear hypothesis tied to a measurable risk metric. Not "improve efficiency"—that's table stakes. We're talking "reduce false positive alerts by 30% while maintaining 99.5% true positive capture." Specific. Auditable. Defensible.
-
-
-Second principle: build your guardrails before your models. I learned this from CBA's AI Factory approach. They don't just deploy models—they deploy governance frameworks. For us, that means every experiment starts with three documents: data lineage map, decision rights matrix, and fallback procedures. Sounds like overhead? It's actually acceleration. When APRA comes knocking, you're ready.
+Here's the uncomfortable truth: traditional project metrics kill AI initiatives. When CBA launched their AI Factory, they didn't measure success by counting deployed models. They tracked how many manual decisions got automated with appropriate oversight. That's the shift we need to make.
 
 
 
-Let me share a real example. Our operational risk team wanted to use NLP to analyze incident reports. Traditional approach would be: hire data scientists, build custom models, pray it works. Instead, we ran a two-week experiment using Azure's pre-trained models. Cost? About three thousand dollars. Result? We proved the concept, identified data quality issues, and got stakeholder buy-in. More importantly, we learned what wouldn't work before investing millions.
-
-The key insight? Start with the simplest possible implementation that could prove your hypothesis. In risk management, complexity is your enemy. Every additional model parameter is another thing to explain to regulators, another potential failure point, another maintenance burden.
-
-
-Now, let's talk about team structure. Forget the old model of separate data science teams throwing models over the wall. In our squads, we embed AI capability directly into risk teams. One data engineer, one risk analyst who can code, one product owner who understands both domains. Small, focused, accountable.
-
-
-These teams run two-week sprints, but here's the twist—we measure velocity differently. It's not story points or features delivered. It's "experiments completed with documented outcomes." Failed experiments count as positive velocity if they generate learning. This completely changes the dynamic. Teams stop hiding failures and start sharing insights.
+Think about your last steering committee meeting. Did you present F1 scores and confusion matrices? Or did you show how many hours of manual review you eliminated while maintaining audit trails? The metrics that matter aren't technical—they're operational.
 
 
 
-Infrastructure is where most banks stumble. You can't run AI experiments on laptops, but you also can't wait six months for production environments. Our solution? Sandboxed cloud environments with pre-approved data sets. Think of it as a playground with padded walls. Teams can experiment freely, but data can't leave, and models can't touch production systems.
-
-We learned this lesson the hard way. Early on, a team built a beautiful anomaly detection model on their local machines. Worked perfectly. Then we tried to productionize it—different data formats, security restrictions, performance requirements. Six months of rework. Now, every experiment runs in an environment that mirrors production constraints from day one.
-
-
-Here's something PWC's research on agile in regulatory environments taught us: documentation doesn't have to be a burden if it's built into the process. We use automated model cards—every experiment automatically generates documentation about data used, assumptions made, performance metrics, and limitations. It's not perfect prose, but it's consistent, comprehensive, and auditable.
+Let's start with what Finance Derivative taught us about measuring experimental ROI. They discovered that tracking "experiments per sprint" was meaningless. What mattered was "experiments that changed a business decision." One team ran fifty experiments in a quarter—impressive, right? Except none influenced actual trading strategies. Another team ran three experiments that fundamentally changed their risk modeling approach. Guess which team got renewed funding?
 
 
 
-
-Let's address the elephant in the room: stakeholder management. Risk executives didn't get where they are by embracing untested technology. They've seen enough "transformational" initiatives fail. So how do you get buy-in?
-
-First, speak their language. Don't talk about neural networks or transformer architectures. Talk about false positive reduction rates, compliance cost savings, audit trail completeness. Show them how AI experiments actually reduce risk by testing assumptions before full implementation.
-
-Second, start with their biggest pain point. Every risk team has that one process that everyone hates. Maybe it's manual transaction monitoring, maybe it's report reconciliation. Find it, fix it with AI, and suddenly you've got champions instead of skeptics.
+In our context at the bank, I've seen this play out repeatedly. A risk team built a beautiful anomaly detection model with ninety-eight percent accuracy. Fantastic technical achievement. But when we dug deeper, we found it flagged so many false positives that analysts started ignoring the alerts. The real metric we should've tracked? Percentage of alerts that led to actionable investigations.
 
 
 
-Now, the technical reality check. Most risk teams are still running critical processes in Excel and Access. That's not changing overnight, and it shouldn't. The trick is building bridges. We use Python scripts that read Excel files, process them with AI models, and write results back to Excel. Risk analysts stay in their comfort zone while benefiting from AI capabilities.
-
-This hybrid approach also helps with the skills transition. Remember, these are smart people who've been coding in VBA for years. They understand logic, data structures, and process automation. What they need is a gentle on-ramp to modern tools. We run "Python for VBA developers" workshops—huge success. Suddenly, that senior risk analyst who's been building Access databases for a decade is writing data pipelines.
-
-
-Let's talk about measuring success. Traditional project metrics don't work for AI experiments. We track four key indicators: experiment cycle time—how fast can we go from hypothesis to result; learning velocity—how many validated insights per sprint; production readiness—what percentage of experiments could scale if successful; and compliance overhead—how much extra effort for governance versus pure development.
+SmartDev's approach to experimental ROI gives us a framework here. They measure three things: speed to first insight, cost per validated learning, and what they call "pivot velocity"—how quickly teams adjust based on results. Notice what's missing? Model performance metrics. They're measuring the learning process, not the output artifacts.
 
 
 
-
-The best teams consistently hit two-week experiment cycles. They're not building production systems in two weeks—they're proving or disproving hypotheses. This rapid iteration is crucial in risk management where requirements shift with regulatory changes.
-
-Here's a pattern we see repeatedly: teams start with rule-based automation, basically RPA on steroids. Then they add simple machine learning—decision trees, logistic regression. Finally, they graduate to deep learning for specific use cases. This progression isn't about technical sophistication. It's about building trust and capability incrementally.
-
-The biggest mistake? Jumping straight to complex AI. I've seen teams try to implement transformer models for problems that could be solved with regex. In risk management, explainability trumps accuracy. A simple model that regulators understand beats a black box that performs marginally better.
+Let me give you a concrete example from our credit risk squad. Instead of tracking model accuracy, we started measuring "decision confidence lift." Before AI assistance, analysts spent forty percent of their time on low-confidence decisions—cases where they weren't sure which way to go. After implementing our classification model, that dropped to fifteen percent. That's a metric that resonates in the boardroom.
 
 
 
-Westpac's recent productivity gains illustrate this perfectly. They didn't revolutionize risk management overnight. They identified specific processes, ran controlled experiments, and scaled what worked. Their document processing AI started as a two-week proof of concept. Now it handles millions of documents annually.
-
-
-CPS 230 operational resilience requirements actually help here. The regulation forces banks to map critical processes and dependencies. Guess what? That mapping is exactly what you need for AI experimentation. You know which processes matter most, what data flows where, and what controls exist. It's like having a treasure map for AI opportunities.
-
-
-ASIC Report 798 on AI governance provides another framework advantage. The report's emphasis on ongoing monitoring aligns perfectly with experimental approaches. You're not deploying and forgetting—you're continuously testing, measuring, and adjusting. This iterative approach is both compliant and effective.
+Grant Thornton's work on early-stage compliance metrics revealed something crucial for regulated environments. They found that "compliance by design" metrics outperformed "compliance by review" metrics by a factor of ten in terms of actual risk reduction. What does this mean practically? Track how many compliance requirements are built into your AI workflows versus how many require manual checking afterward.
 
 
 
-Let me share our experiment playbook. Week one: define hypothesis, assemble data, establish baseline metrics. Week two: build minimal viable model, test against baseline, document findings. That's it. No feature engineering marathons, no hyperparameter tuning festivals. Just enough to answer: does this approach have potential?
-
-If yes, we run a second experiment to address the biggest risk or uncertainty. If no, we document why and move on. This fail-fast mentality is cultural kryptonite in traditional banking, but it's essential for AI success. The key is framing failures as risk reduction—we've eliminated an approach that wouldn't have worked at scale.
-
-
-Data quality deserves special mention. In risk management, data isn't just messy—it's often intentionally obscured for privacy reasons. Our experiments always include a data quality assessment phase. Can we actually get the data we need in production? Is it complete enough to be useful? Are there regulatory restrictions we haven't considered?
+Here's how we implemented this in our AML squad. We stopped counting false positive rates and started tracking "investigator productivity"—how many cases an analyst could thoroughly review per day. When our model pre-filtered and pre-enriched cases with relevant context, investigators went from reviewing eight cases daily to twenty-five. More importantly, the quality of investigations improved because analysts spent time on analysis, not data gathering.
 
 
 
-
-Here's the strategic angle most teams miss: AI experiments in risk management aren't just about efficiency. They're about changing how decisions get made. When you can test scenarios in hours instead of months, when you can quantify uncertainty instead of relying on gut feel, when you can monitor continuously instead of sampling—that transforms risk management from reactive to proactive.
-
-The teams succeeding with this approach share common traits. They have strong product ownership—someone who bridges technical and business domains. They have executive sponsors who understand iterative development. They have risk partners who see AI as enhancing, not replacing, human judgment. And critically, they have permission to fail fast and learn.
-
-Your next step? Pick one risk process that's currently manual, repetitive, and rule-based. Run a two-week experiment to automate just the most painful part. Use cloud services, pre-trained models, and existing data. Document everything. Whether it succeeds or fails, you'll have learned something valuable about running AI experiments in your environment.
+Sutherland's research on moving past AI hype to value creation identified a pattern: successful teams measure outcomes, not outputs. They track business KPIs that existed before AI, then show how AI moves those needles. This is particularly powerful when dealing with skeptical stakeholders who've seen too many proof-of-concepts die in production.
 
 
 
-Remember, in risk management, the goal isn't to build the most sophisticated AI. It's to build AI that reduces risk, improves compliance, and scales reliably. Experiments are how you find that sweet spot between innovation and regulation. Start small, fail fast, document everything, and scale what works. That's how you transform risk management one experiment at a time.</description></item><item><title>003 Managing Ai Sprints And User Stories In Jira</title><guid>003_managing_ai_sprints_and_user_stories_in_jira</guid><pubDate>Sun, 15 Jun 2025 04:13:04 +1000</pubDate><enclosure url="https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Practical%20Delivery%20and%20Agile%20AI/media/003_managing_ai_sprints_and_user_stories_in_jira.mp3" length="4816173" type="audio/mpeg" /><description>Narrated episode: 003 Managing Ai Sprints And User Stories In Jira</description></item><item><title>009 Stakeholder Updates For Experimental Ai Programs</title><guid>009_stakeholder_updates_for_experimental_ai_programs</guid><pubDate>Sun, 15 Jun 2025 04:07:24 +1000</pubDate><enclosure url="https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Practical%20Delivery%20and%20Agile%20AI/media/009_stakeholder_updates_for_experimental_ai_programs.mp3" length="4774317" type="audio/mpeg" /><description>Narrated episode: 009 Stakeholder Updates For Experimental Ai Programs</description></item><item><title>006 Quarterly Epic Planning For Ai Innovation</title><guid>006_quarterly_epic_planning_for_ai_innovation</guid><pubDate>Sun, 15 Jun 2025 04:06:08 +1000</pubDate><enclosure url="https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Practical%20Delivery%20and%20Agile%20AI/media/006_quarterly_epic_planning_for_ai_innovation.mp3" length="5077101" type="audio/mpeg" /><description>Narrated episode: 006 Quarterly Epic Planning For Ai Innovation</description></item><item><title>008 Measuring Success In Early Stage Ai Squads</title><guid>008_measuring_success_in_early_stage_ai_squads</guid><pubDate>Sun, 15 Jun 2025 04:06:07 +1000</pubDate><enclosure url="https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Practical%20Delivery%20and%20Agile%20AI/media/008_measuring_success_in_early_stage_ai_squads.mp3" length="1011693" type="audio/mpeg" /><description>Narrated episode: 008 Measuring Success In Early Stage Ai Squads</description></item><item><title>007 Building Mvp Culture In Risk Tech Teams</title><guid>007_building_mvp_culture_in_risk_tech_teams</guid><pubDate>Sun, 15 Jun 2025 04:05:53 +1000</pubDate><enclosure url="https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Practical%20Delivery%20and%20Agile%20AI/media/007_building_mvp_culture_in_risk_tech_teams.mp3" length="4166061" type="audio/mpeg" /><description>Narrated episode: 007 Building Mvp Culture In Risk Tech Teams</description></item><item><title>002 From Prototype To Production Ai Pilot Pathways</title><guid>002_from_prototype_to_production_ai_pilot_pathways</guid><pubDate>Sun, 15 Jun 2025 04:05:07 +1000</pubDate><enclosure url="https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Practical%20Delivery%20and%20Agile%20AI/media/002_from_prototype_to_production_ai_pilot_pathways.mp3" length="6890157" type="audio/mpeg" /><description>Narrated episode: 002 From Prototype To Production Ai Pilot Pathways</description></item><item><title>005 Confluence Documentation For Ai Projects</title><guid>005_confluence_documentation_for_ai_projects</guid><pubDate>Sun, 15 Jun 2025 04:04:59 +1000</pubDate><enclosure url="https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Practical%20Delivery%20and%20Agile%20AI/media/005_confluence_documentation_for_ai_projects.mp3" length="3947949" type="audio/mpeg" /><description>Narrated episode: 005 Confluence Documentation For Ai Projects</description></item><item><title>004 Integrating Ai Initiatives With Risk System Workflows</title><guid>004_integrating_ai_initiatives_with_risk_system_workflows</guid><pubDate>Sun, 15 Jun 2025 04:03:41 +1000</pubDate><enclosure url="https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Practical%20Delivery%20and%20Agile%20AI/media/004_integrating_ai_initiatives_with_risk_system_workflows.mp3" length="909741" type="audio/mpeg" /><description>Narrated episode: 004 Integrating Ai Initiatives With Risk System Workflows</description></item></channel></rss>
+Let's talk about stakeholder-specific metrics. Your risk committee doesn't care about your model's precision-recall curve. They care about regulatory breaches avoided, audit findings reduced, and control effectiveness improved. Frame your metrics in their language. When we deployed our document classification system, we didn't talk about ninety-five percent accuracy. We talked about reducing document review time from three days to thirty minutes while maintaining SOX compliance.
+
+
+
+For APRA and ASIC reporting, you need what I call "defensive metrics"—measurements that prove you're not introducing new risks. Track model drift, but translate it to business impact. "Our model drift monitoring caught a two percent accuracy degradation" becomes "We prevented approximately fifty thousand dollars in potential misclassified transactions through proactive model monitoring."
+
+
+
+Here's a framework I use with all my squads: Level one metrics prove the model works—accuracy, precision, recall. Level two metrics prove the solution works—processing time, error rates, user adoption. Level three metrics prove the business impact—cost savings, risk reduction, revenue enablement. Most teams stop at level one. Winners focus on level three while maintaining level one as hygiene factors.
+
+
+
+Consider user adoption metrics carefully. A model with seventy percent accuracy that people actually use beats a ninety-five percent accurate model that sits on the shelf. We track "voluntary usage rate"—when users have a choice between the AI-assisted process and the manual process, which do they choose? If that number isn't above eighty percent after the honeymoon period, you have a problem that better algorithms won't solve.
+
+
+
+Let me share a cautionary tale about vanity metrics. One team proudly reported processing a million documents per month with their NLP system. Impressive, until we realized ninety percent were duplicate submissions that should have been caught at ingestion. They were celebrating a symptom of upstream process failure. Always ask: "What behavior does this metric incentivize?"
+
+
+
+For early-stage squads, I recommend the "North Star plus Three" approach. Choose one North Star metric that captures overall value delivery—maybe it's "hours saved per analyst per week" or "regulatory findings reduced." Then pick three supporting metrics that act as early warning systems: typically one for quality, one for adoption, and one for operational health.
+
+
+
+Quality metrics in production differ from development. In dev, you care about test set performance. In production, you care about edge case handling. Track "graceful failure rate"—when your model encounters something unexpected, does it fail safely and alert appropriately? This is especially critical under CPS two-thirty operational risk requirements.
+
+
+
+Adoption metrics should be behavioral, not just usage counts. Don't just track logins or API calls. Track complete workflows. How many users start and finish the AI-assisted process? Where do they drop off? What manual workarounds are they creating? These insights often reveal more about your solution's real-world effectiveness than any accuracy metric.
+
+
+
+Operational health metrics keep you out of trouble. Monitor inference latency, but frame it as "percentage of requests meeting SLA." Track model retraining frequency, but present it as "days since last production model update" with clear thresholds for concern. These metrics build confidence with risk and compliance teams who worry about AI reliability.
+
+
+
+Here's something most teams miss: measure what doesn't happen. Our fraud detection squad's biggest win wasn't catching more fraud—it was reducing false positives that annoyed good customers. We tracked "high-value customer friction events" and showed a sixty percent reduction. That metric got executive attention because it directly impacted customer satisfaction scores.
+
+
+
+For regulatory reporting, create metrics that tell a story of continuous improvement and control. ASIC Report seven-ninety-eight emphasizes the importance of demonstrating ongoing monitoring and adjustment. Track "model performance reviews completed" and "improvement actions implemented." Show that you're not just deploying and forgetting.
+
+
+
+Cost metrics need nuance in AI projects. Don't just track development costs—track total cost of ownership including ongoing monitoring, retraining, and support. But balance this against opportunity cost. What's the cost of not automating? What's the risk of human error in the current process? These comparisons often justify higher AI operational costs.
+
+
+
+Let me give you a practical measurement framework we use. Week one to four: measure technical performance and deployment readiness. Month two to three: measure user adoption and process integration. Month four onward: measure business impact and ROI. This staged approach manages expectations and shows progress even when business metrics take time to materialize.
+
+
+
+Don't forget about measuring team learning velocity. How quickly can your squad go from business problem to deployed solution? This meta-metric often predicts long-term success better than any individual project metric. Teams that can rapidly iterate and learn outperform teams that spend months perfecting their first model.
+
+
+
+For stakeholder communication, create metric dashboards with progressive disclosure. Executive view: three to five business impact metrics with trend arrows. Manager view: add operational metrics and adoption indicators. Technical view: include model performance and system health metrics. Same data, different lenses.
+
+
+
+Here's my challenge to you: Look at your current metrics. How many require explanation to a business stakeholder? If it's more than twenty percent, you're measuring the wrong things. Transform "model drift detected" into "risk of decision quality degradation." Transform "ninety-five percent accuracy" into "five percent of cases require human review." Make your metrics tell the business story.
+
+
+
+Remember, in early-stage AI squads, your metrics should evolve rapidly. What matters in month one won't matter in month six. Build measurement flexibility into your operating rhythm. The teams that succeed are those that can pivot their success criteria as they learn what actually drives value in their specific context.
+
+
+
+The ultimate test? If your AI squad disappeared tomorrow, would the metrics you track show a clear business impact? If not, you're measuring activity, not outcomes. And in a resource-constrained, compliance-focused environment like banking, outcomes are the only currency that matters.</description></item><item><title>004 Integrating Ai Initiatives With Risk System Workflows</title><guid>004_integrating_ai_initiatives_with_risk_system_workflows</guid><pubDate>Sun, 15 Jun 2025 04:24:57 +1000</pubDate><enclosure url="https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Practical%20Delivery%20and%20Agile%20AI/media/004_integrating_ai_initiatives_with_risk_system_workflows.mp3" length="4869741" type="audio/mpeg" /><description>Narrated episode: 004 Integrating Ai Initiatives With Risk System Workflows</description></item><item><title>001 Running Ai Experiments In Risk Management Squads</title><guid>001_running_ai_experiments_in_risk_management_squads</guid><pubDate>Sun, 15 Jun 2025 04:13:09 +1000</pubDate><enclosure url="https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Practical%20Delivery%20and%20Agile%20AI/media/001_running_ai_experiments_in_risk_management_squads.mp3" length="5599917" type="audio/mpeg" /><description>Narrated episode: 001 Running Ai Experiments In Risk Management Squads</description></item><item><title>003 Managing Ai Sprints And User Stories In Jira</title><guid>003_managing_ai_sprints_and_user_stories_in_jira</guid><pubDate>Sun, 15 Jun 2025 04:13:04 +1000</pubDate><enclosure url="https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Practical%20Delivery%20and%20Agile%20AI/media/003_managing_ai_sprints_and_user_stories_in_jira.mp3" length="4816173" type="audio/mpeg" /><description>Narrated episode: 003 Managing Ai Sprints And User Stories In Jira</description></item><item><title>009 Stakeholder Updates For Experimental Ai Programs</title><guid>009_stakeholder_updates_for_experimental_ai_programs</guid><pubDate>Sun, 15 Jun 2025 04:07:24 +1000</pubDate><enclosure url="https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Practical%20Delivery%20and%20Agile%20AI/media/009_stakeholder_updates_for_experimental_ai_programs.mp3" length="4774317" type="audio/mpeg" /><description>Narrated episode: 009 Stakeholder Updates For Experimental Ai Programs</description></item><item><title>006 Quarterly Epic Planning For Ai Innovation</title><guid>006_quarterly_epic_planning_for_ai_innovation</guid><pubDate>Sun, 15 Jun 2025 04:06:08 +1000</pubDate><enclosure url="https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Practical%20Delivery%20and%20Agile%20AI/media/006_quarterly_epic_planning_for_ai_innovation.mp3" length="5077101" type="audio/mpeg" /><description>Narrated episode: 006 Quarterly Epic Planning For Ai Innovation</description></item><item><title>007 Building Mvp Culture In Risk Tech Teams</title><guid>007_building_mvp_culture_in_risk_tech_teams</guid><pubDate>Sun, 15 Jun 2025 04:05:53 +1000</pubDate><enclosure url="https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Practical%20Delivery%20and%20Agile%20AI/media/007_building_mvp_culture_in_risk_tech_teams.mp3" length="4166061" type="audio/mpeg" /><description>Narrated episode: 007 Building Mvp Culture In Risk Tech Teams</description></item><item><title>002 From Prototype To Production Ai Pilot Pathways</title><guid>002_from_prototype_to_production_ai_pilot_pathways</guid><pubDate>Sun, 15 Jun 2025 04:05:07 +1000</pubDate><enclosure url="https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Practical%20Delivery%20and%20Agile%20AI/media/002_from_prototype_to_production_ai_pilot_pathways.mp3" length="6890157" type="audio/mpeg" /><description>Narrated episode: 002 From Prototype To Production Ai Pilot Pathways</description></item><item><title>005 Confluence Documentation For Ai Projects</title><guid>005_confluence_documentation_for_ai_projects</guid><pubDate>Sun, 15 Jun 2025 04:04:59 +1000</pubDate><enclosure url="https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Practical%20Delivery%20and%20Agile%20AI/media/005_confluence_documentation_for_ai_projects.mp3" length="3947949" type="audio/mpeg" /><description>Narrated episode: 005 Confluence Documentation For Ai Projects</description></item></channel></rss>
