@@ -1,100 +1,100 @@
 <?xml version='1.0' encoding='utf-8'?>
-<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0"><channel><title>Anonymous Narration Feed</title><link>https://surly-16.github.io/js-audio-feed/</link><description>Strategic narrated content on AI, banking, and innovation</description><language>en-au</language><itunes:explicit>no</itunes:explicit><itunes:image href="https://github.com/surly-16/js-audio-feed/blob/main/Cover.png?raw=true" /><image><url>https://github.com/surly-16/js-audio-feed/blob/main/Cover.png?raw=true</url><title>Anonymous Narration Feed</title><link>https://surly-16.github.io/js-audio-feed/</link></image><item><title>Designing Adaptive Prompt Libraries For Cross Domain Banking Applications</title><enclosure url="https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Media//designing_adaptive_prompt_libraries_for_cross_domain_banking_applications.mp3" length="4541421" type="audio/mpeg" /><guid>designing_adaptive_prompt_libraries_for_cross_domain_banking_applications</guid><pubDate>Sat, 14 Jun 2025 23:23:05 +1000</pubDate><description>Narrated episode: Designing Adaptive Prompt Libraries For Cross Domain Banking Applications
+<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0"><channel><title>Anonymous Narration Feed</title><link>https://surly-16.github.io/js-audio-feed/</link><description>Strategic narrated content on AI, banking, and innovation</description><language>en-au</language><itunes:explicit>no</itunes:explicit><itunes:image href="https://github.com/surly-16/js-audio-feed/blob/main/Cover.png?raw=true" /><image><url>https://github.com/surly-16/js-audio-feed/blob/main/Cover.png?raw=true</url><title>Anonymous Narration Feed</title><link>https://surly-16.github.io/js-audio-feed/</link></image><item><title>Reating Self Documenting Agent Systems For Regulatory Compliance</title><enclosure url="https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Media//reating_self_documenting_agent_systems_for_regulatory_compliance.mp3" length="827565" type="audio/mpeg" /><guid>reating_self_documenting_agent_systems_for_regulatory_compliance</guid><pubDate>Sat, 14 Jun 2025 23:50:21 +1000</pubDate><description>Narrated episode: Reating Self Documenting Agent Systems For Regulatory Compliance
 
-Let me share something that happened last week. Our risk team was struggling with their daily reporting workflows—spending hours crafting prompts for different scenarios, each analyst reinventing the wheel. Sound familiar?  This is exactly why we need to talk about adaptive prompt libraries.
-
-[PAUSE]
-
-Think about how we currently handle AI prompts across the bank. Every team, every project, every use case—they're all creating prompts in isolation. Marketing has their customer communication templates. Risk has their assessment frameworks. Lending has their decision support prompts. But here's the thing—they're solving similar problems with completely different approaches.
-
-What if we could build a centralized, adaptive system that learns from every interaction across every domain? Not just a static repository, but a living library that evolves with our needs.
+So, here's something I've been thinking about lately.  Last week, I was in a meeting with our compliance team, and they mentioned something that really stuck with me. They said, "We spend more time documenting what our systems did than actually improving them."  And you know what? They're absolutely right.
 
 [PAUSE]
 
-Let me paint you a picture of what this looks like in practice. Imagine a prompt library that understands context—not just keywords, but the actual business intent behind each request. When a risk analyst needs to assess a commercial lending portfolio, the system doesn't just offer a generic template. It adapts based on the specific risk factors, regulatory requirements, and even the analyst's previous interactions.
+Let me paint you a picture of where we are today.  Every time we deploy an automated process—whether it's for credit decisioning, transaction monitoring, or customer service routing—we create what I call a &amp;quot;documentation debt.&amp;quot;  Teams scramble to write up how the system works, what decisions it made, and why.  But here's the kicker: by the time that documentation is complete, the system has already evolved.
 
 
 
-Here's where it gets interesting from a technical perspective. We're talking about a multi-layered architecture. At the base, you have your core prompt templates—think of these as your foundational building blocks. These are your verified, compliant prompts that have gone through legal and risk review.
-
-Above that, you have your adaptation layer. This is where machine learning comes in. The system tracks which prompts work best for which scenarios, which modifications improve outcomes, and which combinations drive the most value. It's not replacing human judgment—it's amplifying it.
+Now, imagine if our agent systems could document themselves.  Not just logging what they did, but explaining why they did it, in language that both our technical teams and our regulators can understand.  That's what we're going to explore today.
 
 [PAUSE]
 
-Let me give you a concrete example from our credit risk team. They were assessing SME loan applications, and each analyst had their own approach to prompting our AI systems. Some focused on financial ratios, others on industry trends, some on behavioral indicators. All valid approaches, but inconsistent results.
-
-We prototyped an adaptive prompt system that learned from their collective expertise. Within two weeks, we saw a 40% reduction in assessment time and—more importantly—a significant improvement in decision consistency. The system didn't replace their expertise; it captured and scaled it.
-
-[PAUSE]
-
-Now, let's talk about the banking-specific challenges we need to address. Compliance and auditability aren't just nice-to-haves—they're non-negotiables. Every prompt, every adaptation, every output needs a clear audit trail. 
-
-This is where our design gets sophisticated. We're implementing version control at the prompt level, with full lineage tracking. When a regulator asks why a particular decision was made, we can show exactly which prompts were used, how they were adapted, and what data informed those adaptations.
+Let's start with the core concept.  A self-documenting agent system is essentially an AI-powered process that maintains its own audit trail, but goes beyond traditional logging.  It captures decision rationale, contextual factors, and even uncertainty levels—all in real-time.
 
 
 
-Think about model risk management. We already have frameworks for validating statistical models. Adaptive prompt libraries need similar governance. We're building in automated testing, drift detection, and performance monitoring. If a prompt starts producing outlier results, the system flags it for review.
+Think of it like this:  Instead of a black box that spits out decisions, you have a glass box that shows you exactly how it arrived at each conclusion.  And the best part? It writes this explanation as it works, not as an afterthought.
 
 [PAUSE]
 
-Here's something that might surprise you—the biggest value isn't in the technology itself. It's in the knowledge capture. Every time an expert refines a prompt, every time a team discovers a better approach, that knowledge becomes part of our institutional memory.
+From a technical perspective, we're talking about three key components.  First, structured decision logging using frameworks like LangChain or similar tools.  Every step in the agent's reasoning chain gets captured with metadata—timestamps, confidence scores, data sources used.
 
-I was talking to our head of operational risk last month. She mentioned how they lose critical expertise every time someone leaves the team. With adaptive prompt libraries, that expertise gets encoded into the system. New team members can leverage years of accumulated knowledge from day one.
 
-[PAUSE]
 
-Let's dive into some specific use cases across our domains. In retail banking, we're using adaptive prompts for customer service scenarios. The system learns which response styles work best for different customer segments and automatically adjusts tone and complexity.
+Second, natural language generation for explanations.  The system doesn't just log &amp;quot;Decision: Approve loan&amp;quot;—it writes, &amp;quot;Approved loan application based on debt-to-income ratio of 35%, stable employment history of 5 years, and credit score of 720.&amp;quot;
 
-For our commercial lending team, it's about deal structuring. The prompt library adapts based on industry, deal size, and risk profile, suggesting relevant covenants and terms based on successful past transactions.
 
-In wealth management, advisors use adapted prompts to generate personalized investment summaries that align with each client's sophistication level and preferences.
+
+Third, and this is crucial—version control for prompts and models.  Every change to how the system thinks gets tracked, tagged, and linked to specific outcomes.  It's like Git for AI decision-making.
 
 [PAUSE]
 
-But here's where we need to be careful. Adaptation without governance is just automated chaos. We need clear boundaries on what can adapt and what stays fixed. Regulatory disclosures? Fixed. Risk thresholds? Fixed. Communication style and analytical approach? Those can adapt within defined parameters.
-
-We're implementing a three-tier governance model. Tier one: fully automated adaptation for low-risk use cases. Tier two: adaptation with human review for medium-risk scenarios. Tier three: locked templates for high-risk or regulatory-critical applications.
-
-[PAUSE]
-
-Now, let's talk about the technical implementation. We're not building this from scratch. We're leveraging existing tools—Python for the orchestration layer, vector databases for semantic search, and our existing ML platforms for the adaptation algorithms.
-
-The key is the abstraction layer. Teams don't need to understand the underlying complexity. They interact through a simple interface—select your domain, describe your task, and the system serves up the most appropriate prompt, pre-adapted for your context.
+Now, let me share some concrete use cases from our banking context.  Take our risk assessment workflows.  Currently, when a transaction gets flagged, someone has to dig through logs, reconstruct the logic, and write up why it was flagged.  With self-documenting agents, the system would generate a compliance-ready report instantly: &amp;quot;Transaction flagged due to unusual pattern: 300% increase from typical spending, merchant category mismatch, and geographic anomaly.&amp;quot;
 
 
 
-Here's what's really exciting about the emerging developments in this space. We're seeing advances in prompt optimization algorithms that can automatically refine prompts based on outcome metrics. Imagine prompts that get better at their job without human intervention, while still maintaining full auditability.
-
-We're also exploring federated learning approaches. Different business units can train their own adaptations while contributing to the collective intelligence of the system. Privacy-preserving techniques ensure sensitive information stays within appropriate boundaries.
+Or consider customer complaint handling.  When our AI routes a complaint to a specific team, it could automatically document: &amp;quot;Routed to mortgage team based on keyword analysis (refinance, rate, terms), sentiment score of -0.7 indicating high frustration, and customer profile showing active home loan.&amp;quot;
 
 [PAUSE]
 
-Let me share what this means for decision-making and governance. Traditional governance assumes static processes—you document a procedure, train people on it, and audit against it. Adaptive systems require dynamic governance. We need frameworks that can evaluate not just outcomes, but the adaptation process itself.
+But here's where it gets really interesting for governance and decision-making.  These self-documenting systems create what I call &amp;quot;decision lineage&amp;quot;—a complete trace from input to output that satisfies regulatory requirements without manual intervention.
 
-We're pioneering what we call "governance by design." Every adaptation has built-in constraints, every evolution is logged, and every outcome is traceable. The system can't adapt outside its governance envelope, giving us innovation within boundaries.
 
-[PAUSE]
 
-So what does this mean for you and your teams? First, start documenting your prompts. Even in a simple spreadsheet. Capture what works, what doesn't, and why. This becomes the seed data for your adaptive library.
+For APRA reporting, for instance, we could automatically generate documentation showing how our credit models make decisions, complete with feature importance scores and counterfactual explanations.  &amp;quot;If the applicant's income was $10,000 higher, the decision would have changed to approved.&amp;quot;
 
-Second, identify your high-frequency, high-value use cases. These are your quick wins—areas where standardization and adaptation can drive immediate impact.
 
-Third, engage with our governance teams early. Don't wait until you've built something to think about compliance. Build it in from the start.
+
+This isn't just about compliance—it's about trust.  When our risk managers can see exactly why a system made a decision, they can confidently defend it to regulators, auditors, and customers.
 
 [PAUSE]
 
-Looking ahead, I see adaptive prompt libraries becoming as fundamental to our operations as our data warehouses are today. They're not just efficiency tools—they're knowledge platforms that capture, refine, and scale our collective expertise.
-
-The banks that figure this out first won't just be more efficient. They'll be more consistent, more compliant, and more capable of scaling their best practices across the entire organization.
+Now, let's talk about what's emerging in this space.  We're seeing new patterns like &amp;quot;explanation-first design,&amp;quot; where you actually write the explanation template before building the decision logic.  It forces you to think about interpretability from day one.
 
 
 
-Here's my challenge to you: Think about the prompts you use every day. The questions you ask, the analyses you request, the reports you generate. What would it mean if the best version of those prompts was available to everyone, automatically adapted to their specific context?
+There's also growing interest in what I call &amp;quot;regulatory prompt engineering&amp;quot;—designing prompts that naturally produce outputs aligned with compliance requirements.  Instead of retrofitting documentation, you build it into the agent's core behavior.
 
-That's not a future state. That's what we're building right now. And we need your expertise to make it work.
+
+
+And here's something fascinating:  Some teams are experimenting with dual-agent architectures, where one agent makes decisions and another agent audits and documents those decisions in real-time.  It's like having a built-in compliance officer for every automated process.
 
 [PAUSE]
 
-The question isn't whether we'll have adaptive prompt libraries. The question is whether we'll build them thoughtfully, with proper governance, in a way that amplifies human expertise rather than replacing it.
+So, what does this mean for us practically?  Here are your actionable takeaways.
 
-That's our opportunity. And that's why this matters.</description><link>https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Media//designing_adaptive_prompt_libraries_for_cross_domain_banking_applications.txt</link></item><item><title>Creating Reusable Agent Templates For Cross Functional Banking Workflow</title><enclosure url="https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Media//creating_reusable_agent_templates_for_cross_functional_banking_workflow.mp3" length="6503277" type="audio/mpeg" /><guid>creating_reusable_agent_templates_for_cross_functional_banking_workflow</guid><pubDate>Sat, 14 Jun 2025 22:52:29 +1000</pubDate><description>Narrated episode: Creating Reusable Agent Templates For Cross Functional Banking Workflow</description><link>https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Media//creating_reusable_agent_templates_for_cross_functional_banking_workflow.txt</link></item><item><title>Creating Reusable Agent Templates For Cross Functional Banking Workflows</title><enclosure url="https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Media//creating_reusable_agent_templates_for_cross_functional_banking_workflows.mp3" length="2679021" type="audio/mpeg" /><guid>creating_reusable_agent_templates_for_cross_functional_banking_workflows</guid><pubDate>Sat, 14 Jun 2025 21:48:46 +1000</pubDate><description>Narrated episode: Creating Reusable Agent Templates For Cross Functional Banking Workflows</description><link>https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Media//creating_reusable_agent_templates_for_cross_functional_banking_workflows.txt</link></item><item><title>Designing Optimal Agent Architectures For Scalable Ai Workflows</title><enclosure url="https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Media//designing_optimal_agent_architectures_for_scalable_ai_workflows.mp3" length="2987949" type="audio/mpeg" /><guid>designing_optimal_agent_architectures_for_scalable_ai_workflows</guid><pubDate>Sat, 14 Jun 2025 21:29:40 +1000</pubDate><description>Narrated episode: Designing Optimal Agent Architectures For Scalable Ai Workflows</description><link>https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Media//designing_optimal_agent_architectures_for_scalable_ai_workflows.txt</link></item><item><title>Ssml Output</title><enclosure url="https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Media//ssml_output.mp3" length="1006317" type="audio/mpeg" /><guid>ssml_output</guid><pubDate>Sat, 14 Jun 2025 21:10:35 +1000</pubDate><description>Narrated episode: Ssml Output</description><link>https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Media//ssml_output.txt</link></item></channel></rss>
+
+
+First, start small.  Pick one process—maybe transaction monitoring or customer categorization—and retrofit it with self-documentation capabilities.  Use structured outputs, capture decision factors, and generate plain-English explanations.
+
+
+
+Second, establish documentation standards now.  What needs to be captured? How should explanations be formatted? What level of detail do different stakeholders need?  Create templates that your agents can fill in.
+
+
+
+Third, invest in prompt versioning and testing infrastructure.  Every prompt change should be traceable to specific outcomes and documentation quality metrics.
+
+
+
+Fourth, engage your compliance and risk teams early.  Show them prototypes, get their input on explanation quality, and iterate based on their needs.  They're not just stakeholders—they're co-designers of these systems.
+
+[PAUSE]
+
+As we wrap up, I want you to think about this:  In five years, will we still be manually documenting what our AI systems do?  Or will we have systems that explain themselves better than we ever could?
+
+
+
+The technology is here. The regulatory need is clear.  The question is: How quickly can we move from reactive documentation to proactive, self-explaining systems?
+
+
+
+Think about your own workflows.  Where are you spending time explaining what automated systems did?  Those are your opportunities.  Those are where self-documenting agents can transform not just efficiency, but trust and transparency in everything we do.
+
+
+
+The future of compliance isn't more documentation—it's smarter documentation.  And that future starts with the systems we build today.</description><link>https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Media//reating_self_documenting_agent_systems_for_regulatory_compliance.txt</link></item><item><title>Designing Adaptive Prompt Libraries For Cross Domain Banking Applications</title><enclosure url="https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Media//designing_adaptive_prompt_libraries_for_cross_domain_banking_applications.mp3" length="4541421" type="audio/mpeg" /><guid>designing_adaptive_prompt_libraries_for_cross_domain_banking_applications</guid><pubDate>Sat, 14 Jun 2025 23:23:05 +1000</pubDate><description>Narrated episode: Designing Adaptive Prompt Libraries For Cross Domain Banking Applications</description><link>https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Media//designing_adaptive_prompt_libraries_for_cross_domain_banking_applications.txt</link></item><item><title>Creating Reusable Agent Templates For Cross Functional Banking Workflow</title><enclosure url="https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Media//creating_reusable_agent_templates_for_cross_functional_banking_workflow.mp3" length="6503277" type="audio/mpeg" /><guid>creating_reusable_agent_templates_for_cross_functional_banking_workflow</guid><pubDate>Sat, 14 Jun 2025 22:52:29 +1000</pubDate><description>Narrated episode: Creating Reusable Agent Templates For Cross Functional Banking Workflow</description><link>https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Media//creating_reusable_agent_templates_for_cross_functional_banking_workflow.txt</link></item><item><title>Creating Reusable Agent Templates For Cross Functional Banking Workflows</title><enclosure url="https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Media//creating_reusable_agent_templates_for_cross_functional_banking_workflows.mp3" length="2679021" type="audio/mpeg" /><guid>creating_reusable_agent_templates_for_cross_functional_banking_workflows</guid><pubDate>Sat, 14 Jun 2025 21:48:46 +1000</pubDate><description>Narrated episode: Creating Reusable Agent Templates For Cross Functional Banking Workflows</description><link>https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Media//creating_reusable_agent_templates_for_cross_functional_banking_workflows.txt</link></item><item><title>Designing Optimal Agent Architectures For Scalable Ai Workflows</title><enclosure url="https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Media//designing_optimal_agent_architectures_for_scalable_ai_workflows.mp3" length="2987949" type="audio/mpeg" /><guid>designing_optimal_agent_architectures_for_scalable_ai_workflows</guid><pubDate>Sat, 14 Jun 2025 21:29:40 +1000</pubDate><description>Narrated episode: Designing Optimal Agent Architectures For Scalable Ai Workflows</description><link>https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Media//designing_optimal_agent_architectures_for_scalable_ai_workflows.txt</link></item><item><title>Ssml Output</title><enclosure url="https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Media//ssml_output.mp3" length="1006317" type="audio/mpeg" /><guid>ssml_output</guid><pubDate>Sat, 14 Jun 2025 21:10:35 +1000</pubDate><description>Narrated episode: Ssml Output</description><link>https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Media//ssml_output.txt</link></item></channel></rss>
