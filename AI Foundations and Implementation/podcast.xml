@@ -1,112 +1,116 @@
 <?xml version='1.0' encoding='utf-8'?>
-<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0"><channel><title>AI Foundations and Implementation Feed</title><link>https://surly-16.github.io/js-audio-feed/AI%20Foundations%20and%20Implementation/</link><description>Narrated episodes on AI Foundations and Implementation</description><language>en-au</language><itunes:explicit>no</itunes:explicit><itunes:image href="https://github.com/surly-16/js-audio-feed/blob/main/AI%20Foundations%20and%20Implementation/cover.png?raw=true" /><image><url>https://github.com/surly-16/js-audio-feed/blob/main/AI%20Foundations%20and%20Implementation/cover.png?raw=true</url><title>AI Foundations and Implementation Feed</title><link>https://surly-16.github.io/js-audio-feed/AI%20Foundations%20and%20Implementation/</link></image><item><title>005 Data Governance And Infrastructure Strategy</title><guid>005_data_governance_and_infrastructure_strategy</guid><pubDate>Sun, 15 Jun 2025 03:01:32 +1000</pubDate><enclosure url="https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/AI%20Foundations%20and%20Implementation/media/005_data_governance_and_infrastructure_strategy.mp3" length="5632173" type="audio/mpeg" /><description>Narrated episode: 005 Data Governance And Infrastructure Strategy
+<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0"><channel><title>AI Foundations and Implementation Feed</title><link>https://surly-16.github.io/js-audio-feed/AI%20Foundations%20and%20Implementation/</link><description>Narrated episodes on AI Foundations and Implementation</description><language>en-au</language><itunes:explicit>no</itunes:explicit><itunes:image href="https://github.com/surly-16/js-audio-feed/blob/main/AI%20Foundations%20and%20Implementation/cover.png?raw=true" /><image><url>https://github.com/surly-16/js-audio-feed/blob/main/AI%20Foundations%20and%20Implementation/cover.png?raw=true</url><title>AI Foundations and Implementation Feed</title><link>https://surly-16.github.io/js-audio-feed/AI%20Foundations%20and%20Implementation/</link></image><item><title>006 Ai Opportunity Mapping Using Process Improvement</title><guid>006_ai_opportunity_mapping_using_process_improvement</guid><pubDate>Sun, 15 Jun 2025 03:13:09 +1000</pubDate><enclosure url="https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/AI%20Foundations%20and%20Implementation/media/006_ai_opportunity_mapping_using_process_improvement.mp3" length="5191725" type="audio/mpeg" /><description>Narrated episode: 006 Ai Opportunity Mapping Using Process Improvement
 
-Right now, your bank is sitting on a goldmine of data that could transform how you deliver customer experiences and manage risk. But here's the challenge: without proper governance and infrastructure, that data is just expensive storage. Today, we're diving into how to build a data strategy that actually enables AI innovation while keeping regulators happy.
+Right now, across every major bank in Australia, there's a fundamental shift happening in how we approach process improvement. We're moving from asking "how can we automate this task?" to "how can we fundamentally reimagine this process with AI?" And the teams getting this right aren't the ones with the biggest budgets or the most data scientists—they're the ones who understand how to map AI capabilities to specific process pain points.
 
-Think about CBA's AI Factory—they didn't just buy some cloud services and call it done. They built a comprehensive data governance framework that lets them deploy AI at scale while maintaining APRA compliance. That's the blueprint we're exploring today.
 
 
+Let me share what we're seeing. Last quarter, one of our risk teams reduced their model validation cycle from three weeks to four days. Not through some revolutionary new algorithm, but by applying classic process improvement thinking to their AI implementation. They mapped their existing workflow, identified the constraint—manual data reconciliation—and deployed a targeted LLM solution that could read unstructured validation reports and flag discrepancies.
 
-Let's start with the foundation: data governance in the AI era. Traditional governance focused on access controls and retention policies. But AI governance requires something more sophisticated. You need lineage tracking that shows exactly how data flows through your models. You need quality metrics that flag when incoming data drifts from your training distributions. And critically, you need audit trails that can explain to a regulator why your model made a specific decision six months ago.
 
-I've seen teams struggle with this transition. They're comfortable with rule-based systems where logic is transparent. Move to machine learning, and suddenly you're dealing with feature importance scores and confidence intervals. The governance framework needs to bridge that gap.
 
+This is the opportunity mapping framework we've developed, and it's transforming how we approach AI initiatives across the bank. Instead of starting with the technology and looking for problems to solve, we're starting with process performance metrics and working backwards to the right AI solution.
 
 
-Here's a practical example from our lending operations. We built an income verification model that processes bank statements. The governance layer tracks every transformation—from raw PDF to structured data to model prediction. When ASIC asks about a specific lending decision, we can show them the exact data points used, the confidence scores, and any manual overrides. That's not just compliance; it's operational excellence.
 
-The infrastructure piece is where things get interesting. Most banks face a fundamental choice: cloud, on-premise, or hybrid. But it's not really about the technology—it's about your operating model.
+Think about your current process improvement toolkit. You've got value stream mapping, root cause analysis, statistical process control. Now imagine augmenting each of these with AI capabilities. Value stream mapping becomes intelligent process mining that automatically identifies bottlenecks from system logs. Root cause analysis gets supercharged with machine learning models that can detect patterns humans miss. Statistical process control evolves into predictive analytics that flag issues before they impact customers.
 
 
 
-Cloud platforms like AWS and Azure offer incredible ML capabilities. Auto-scaling for peak loads, managed services that handle the plumbing, and pre-built compliance frameworks. But here's what vendors don't tell you: moving sensitive customer data to the cloud requires extensive risk assessments under CPS 234. You're looking at months of security reviews, penetration testing, and control validation.
 
-On-premise gives you control but comes with hidden costs. I've watched teams burn months just getting GPU clusters configured properly. And don't get me started on the ongoing maintenance—every framework update becomes a project.
+Here's the framework we use. First, we categorize processes by their AI readiness score. This isn't about technical complexity—it's about business impact and regulatory constraints. A high-readiness process has clear success metrics, structured data inputs, and sits outside critical regulatory reporting chains. Think customer service ticket routing or marketing campaign optimization.
 
 
 
-The smart play? Start with a hybrid approach. Keep your core customer data on-premise in your existing data warehouse. Use secure APIs to feed sanitized datasets to cloud-based ML platforms for model training. Then deploy the trained models back on-premise for inference. This gives you cloud innovation speed while maintaining data sovereignty.
 
-Westpac's recent productivity gains came from exactly this approach. They kept sensitive data local but leveraged cloud compute for model experimentation. The result? Fifty percent reduction in model development time while maintaining full regulatory compliance.
+Medium-readiness processes have some unstructured elements or touch regulated activities indirectly. These are your credit assessment support tools or compliance monitoring dashboards. Low-readiness processes directly impact regulatory reporting or require explainable decision-making. Your core credit decisioning or AML transaction monitoring systems.
 
 
 
-Now let's talk about the operational reality of making this work. Your biggest challenge isn't technology—it's organizational readiness. I've seen technically perfect implementations fail because teams weren't prepared for the cultural shift.
+The mistake most teams make is starting with low-readiness processes because that's where the biggest pain points are. But under CPS 230, any AI system touching critical operations needs extensive documentation, validation, and ongoing monitoring. Start with high-readiness processes to build your MLOps capabilities and stakeholder confidence.
 
 
-Traditional automation teams think in deterministic flows. If this, then that. AI introduces probability and uncertainty. Your governance framework needs to account for this mindset shift. Build in thresholds for human review. Create feedback loops that let domain experts correct model outputs. Most importantly, design your infrastructure to support rapid iteration—because your first model will never be your best model.
 
+Let me walk you through a real example. Our home loan processing team identified document verification as their biggest bottleneck. Traditional approach would be to throw OCR and rules-based extraction at it. But when we mapped the process end-to-end, we discovered the real constraint wasn't reading the documents—it was the decision logic around exception handling.
 
 
 
-Here's a concrete example from our risk team. They were using Excel-based rules to flag suspicious transactions. We built an anomaly detection model that surfaced unusual patterns. But instead of replacing the analysts, we designed the system to present findings with explainability scores. Analysts could see why the model flagged something and provide feedback that improved future predictions.
+So we built a two-stage solution. First, a computer vision model that could classify documents and extract key fields with confidence scores. Second, an LLM-based reasoning engine that could handle exceptions by referencing our lending policies. The key innovation? We didn't try to automate the entire process. We automated the 80% of standard cases and built an elegant handoff to human experts for the complex ones.
 
-The infrastructure supported this human-in-the-loop approach. We used Kubernetes to orchestrate model serving, Kafka for real-time data streaming, and Elasticsearch for audit logging. But the key was the feedback API that let analysts tag false positives directly from their workflow tools.
 
 
+This hybrid approach is critical in banking. ASIC Report 798 makes it clear—you need to maintain human oversight for significant decisions. But that doesn't mean AI can't dramatically improve the process. Our loan processors now focus on genuinely complex cases while AI handles the routine verification. Processing time dropped 60%, but more importantly, error rates fell by 40% because humans weren't fatigued by repetitive tasks.
 
-This brings us to a critical point about scalability. Your infrastructure choices today determine your innovation capacity tomorrow. I've seen teams build beautiful proof-of-concepts on local Jupyter notebooks, only to discover they can't scale to production volumes.
 
-Design for scale from day one. Use containerization to ensure consistency across environments. Implement feature stores to avoid data drift between training and serving. Build monitoring that alerts you before models degrade, not after customer complaints roll in.
 
 
+Now, let's talk about the technical architecture that makes this possible. You can't just deploy models in isolation—you need an integrated ecosystem. We've built what we call the AI Process Platform. It combines process mining tools like Celonis or ProcessGold with our ML platform, whether that's SageMaker, Vertex AI, or Azure ML. The process mining continuously monitors performance and feeds that data back to retrain our models.
 
-Let me share a war story about model monitoring. We deployed a customer churn prediction model that worked brilliantly for six months. Then COVID hit. Customer behavior changed overnight, but our model kept using pre-pandemic patterns. By the time we noticed the accuracy drop, we'd missed thousands of at-risk customers.
 
-Now we monitor input data distributions in real-time. When we see significant drift, automated workflows trigger model retraining. The infrastructure investment paid for itself in the first quarter through improved retention rates.
 
 
+This creates a virtuous cycle. The AI improves the process, the process generates better data, which improves the AI. But here's where your Six Sigma background becomes invaluable. You need to establish control limits and monitoring before you deploy. What's your baseline performance? What variance is acceptable? When should the system escalate to human review?
 
-The regulatory landscape adds another layer of complexity. CPS 230 requires boards to maintain operational resilience. In practice, this means your AI systems need fallback mechanisms. What happens when your cloud provider has an outage? How do you handle model failures during critical processing windows?
 
-Build resilience into your architecture. Use multi-region deployments for critical models. Implement circuit breakers that revert to rule-based systems when AI confidence drops below thresholds. Document these controls extensively—regulators love seeing proactive risk management.
 
+We use a traffic light system for AI confidence. Green light—full automation, the model is highly confident and operating within expected parameters. Amber light—automation with human review, the model has flagged something unusual. Red light—full human processing, the input is outside the model's training distribution or touches a high-risk scenario.
 
 
-Here's something most teams miss: data governance isn't just about compliance—it's about competitive advantage. When you can trace every decision back to its data sources, you can iterate faster. When you have quality metrics on every dataset, you waste less time on garbage-in-garbage-out problems.
 
-I recently worked with our home loans team to implement automated data quality checks. Simple things—verifying address formats, flagging suspicious income patterns, validating document completeness. These checks run before data hits our models, catching issues that would otherwise pollute predictions. The result? Twenty percent improvement in straight-through processing rates.
+This approach satisfies regulatory requirements while maximizing efficiency. CPS 230 requires us to demonstrate ongoing model performance monitoring. By building these controls into the process design, compliance becomes automatic rather than an afterthought.
 
 
 
-The infrastructure side enables this agility. Modern data platforms like Databricks or Snowflake provide governance features built-in. Column-level security, automated PII detection, query auditing—these aren't add-ons anymore. They're table stakes for enterprise AI.
+Let's shift to implementation strategy. The biggest challenge isn't technical—it's organizational. You're asking teams to fundamentally change how they work. This is where your process improvement experience becomes crucial. You know how to run kaizen events, how to get stakeholder buy-in, how to measure and communicate success.
 
-But here's the trap: don't over-engineer. I've seen teams spend years building the "perfect" platform while competitors ship imperfect but valuable solutions. Start with your highest-impact use case. Build just enough governance to satisfy regulators. Layer in sophistication as you scale.
 
 
+Start with a proof of value, not a proof of concept. Pick a process where you can demonstrate measurable improvement within 90 days. Document everything—not just for compliance, but to build your playbook. What worked? What didn't? What would you do differently?
 
 
-Let's get practical about implementation. First, map your current data landscape. Where does customer data live? What systems generate it? Who owns it? This sounds basic, but I guarantee you'll find surprises. That random Access database in the credit team might be feeding critical reports.
 
+We've found the most successful implementations follow a specific pattern. Week one to four: process mapping and data assessment. Week five to eight: model development and testing. Week nine to twelve: controlled pilot with heavy monitoring. Week thirteen to sixteen: gradual rollout with continuous optimization.
 
-Next, define your minimum viable governance. For most banks, this means: data lineage for regulatory reporting, quality metrics for model inputs, access controls aligned with your risk framework, and audit logs that satisfy APRA requirements.
 
 
 
-Then choose your infrastructure strategy based on use case characteristics. High-volume, low-latency predictions? You need on-premise or edge deployment. Experimental models with uncertain ROI? Cloud gives you flexibility to fail fast. Customer-facing applications? Hybrid approach balances performance with security.
+The data assessment phase is critical and often underestimated. You need to understand not just what data you have, but its quality, consistency, and governance. In banking, data lineage is crucial. Where did this data come from? Who owns it? What regulations apply? We use a data readiness scorecard that evaluates completeness, accuracy, consistency, timeliness, and compliance.
 
-Remember, infrastructure isn't just compute and storage. It's also the connective tissue—APIs, message queues, data pipelines. These integration points often determine project success. I've seen brilliant models fail because they couldn't integrate with legacy systems.
 
 
 
-Here's a framework we use for infrastructure decisions. We score each use case on five dimensions: data sensitivity, latency requirements, scale variability, regulatory scrutiny, and integration complexity. High scores on sensitivity and scrutiny push toward on-premise. High variability and low latency favor cloud. Most use cases land somewhere in the middle, validating our hybrid approach.
+One pattern we've seen repeatedly—teams assume they need perfect data to start. They don't. What they need is good enough data with a clear improvement path. We implemented an AI solution for payment exception handling that started with 70% data quality. But because we built in feedback loops, the system actually improved data quality over time by flagging inconsistencies for correction.
 
-The governance layer wraps around everything. We use Apache Atlas for metadata management, tracking dataset schemas, transformation logic, and usage patterns. Great Expectations validates data quality at pipeline boundaries. MLflow captures model experiments, parameters, and performance metrics. These tools integrate into our CI/CD pipelines, making governance automatic rather than manual.
 
 
+Now, measuring success requires rethinking traditional metrics. Yes, we still track efficiency gains—processing time, volume handled, cost per transaction. But we also measure risk reduction, compliance improvements, and employee satisfaction. That payment exception system? It reduced processing time by 50%, but more importantly, it caught 15% more potential fraud cases and improved our audit scores.
 
-But tools are just enablers. The real work happens in process design. Every model we deploy goes through a governance review. Data scientists present their feature engineering, explaining why specific variables matter. Risk partners validate that we're not using prohibited attributes or creating discriminatory outcomes. Legal confirms we have appropriate customer consents.
 
-This might sound like bureaucracy, but it's actually acceleration. By addressing concerns early, we avoid last-minute scrambles before production. Teams know the requirements upfront and build compliance into their workflows.
 
+The cultural transformation aspect can't be ignored. We're not replacing people—we're augmenting them. Our risk analysts aren't spending time on data entry anymore. They're investigating complex patterns, improving models, and adding their domain expertise where it matters most. This narrative is crucial for adoption.
 
 
-Let me leave you with this: data governance and infrastructure aren't constraints on innovation—they're enablers. When you can confidently trace data lineage, you can experiment boldly. When your infrastructure scales elastically, you can pursue ambitious use cases. When regulators trust your controls, you get more freedom to innovate.
 
-The banks winning in AI aren't the ones with the best algorithms. They're the ones with the best foundations—governance that ensures quality and compliance, infrastructure that enables rapid iteration, and processes that balance innovation with risk management.
 
+We run "AI literacy" sessions that aren't about teaching everyone to code. They're about helping teams understand what AI can and can't do, how to work with AI systems, and how to identify opportunities in their own processes. We've trained over 500 staff this year, from risk analysts to relationship managers.
 
 
-Start small but think big. Pick one use case. Build governance and infrastructure that could scale to ten similar cases. Learn what works in your environment. Then expand systematically. In twelve months, you'll have transformed from fighting fires to building capabilities.
 
-That's how you turn data from a compliance burden into a strategic asset. That's how you build AI systems that regulators trust and customers love. And that's how you position your bank to thrive in an increasingly algorithmic world.</description></item><item><title>001 Ai Applications Across Banking Risk Functions</title><guid>001_ai_applications_across_banking_risk_functions</guid><pubDate>Sun, 15 Jun 2025 02:28:13 +1000</pubDate><enclosure url="https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/AI%20Foundations%20and%20Implementation/media/001_ai_applications_across_banking_risk_functions.mp3" length="6342573" type="audio/mpeg" /><description>Narrated episode: 001 Ai Applications Across Banking Risk Functions</description></item><item><title>003 Mlops For Banking Environments</title><guid>003_mlops_for_banking_environments</guid><pubDate>Sun, 15 Jun 2025 02:28:13 +1000</pubDate><enclosure url="https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/AI%20Foundations%20and%20Implementation/media/003_mlops_for_banking_environments.mp3" length="5836269" type="audio/mpeg" /><description>Narrated episode: 003 Mlops For Banking Environments</description></item><item><title>002 From Rules To Learning Rpa Vs Ai Automation</title><guid>002_from_rules_to_learning_rpa_vs_ai_automation</guid><pubDate>Sun, 15 Jun 2025 02:27:32 +1000</pubDate><enclosure url="https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/AI%20Foundations%20and%20Implementation/media/002_from_rules_to_learning_rpa_vs_ai_automation.mp3" length="4930029" type="audio/mpeg" /><description>Narrated episode: 002 From Rules To Learning Rpa Vs Ai Automation</description></item><item><title>004 Ai Explainability And Model Monitoring</title><guid>004_ai_explainability_and_model_monitoring</guid><pubDate>Sun, 15 Jun 2025 02:27:12 +1000</pubDate><enclosure url="https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/AI%20Foundations%20and%20Implementation/media/004_ai_explainability_and_model_monitoring.mp3" length="4250733" type="audio/mpeg" /><description>Narrated episode: 004 Ai Explainability And Model Monitoring</description></item></channel></rss>
+
+Looking at the competitive landscape, CBA's AI Factory has shown what's possible with committed investment. They're processing millions of transactions daily through AI systems. But you don't need their scale to start. Westpac's productivity gains came from targeted implementations—customer service automation, document processing, fraud detection. Each started small and scaled based on proven value.
+
+
+
+The regulatory environment is evolving but becoming clearer. APRA's CPS 230 operational risk requirements actually provide a helpful framework. They're not saying don't use AI—they're saying use it responsibly with appropriate controls. Build those controls into your process design from day one, and compliance becomes a competitive advantage, not a burden.
+
+
+
+Here's my challenge to you. Look at your highest-volume, most manual processes. Map them using your existing process improvement tools. Then ask: where could AI eliminate waste? Not replace people, but eliminate the non-value-adding activities that frustrate your teams and slow down your customers.
+
+
+
+Start small. Pick one process, build one solution, prove one success. But build it on a foundation that can scale—robust MLOps, clear governance, measurable outcomes. The banks that win in the next decade won't be the ones with the most AI projects. They'll be the ones who've successfully woven AI into the fabric of how they operate, improve, and serve customers.
+
+
+
+The opportunity is massive, but it requires a different mindset. Stop thinking about AI as a technology project. Start thinking about it as the next evolution of process improvement. You already have the skills—process mapping, data analysis, change management. Now it's time to augment them with AI and transform how banking works.</description></item><item><title>005 Data Governance And Infrastructure Strategy</title><guid>005_data_governance_and_infrastructure_strategy</guid><pubDate>Sun, 15 Jun 2025 03:01:32 +1000</pubDate><enclosure url="https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/AI%20Foundations%20and%20Implementation/media/005_data_governance_and_infrastructure_strategy.mp3" length="5632173" type="audio/mpeg" /><description>Narrated episode: 005 Data Governance And Infrastructure Strategy</description></item><item><title>001 Ai Applications Across Banking Risk Functions</title><guid>001_ai_applications_across_banking_risk_functions</guid><pubDate>Sun, 15 Jun 2025 02:28:13 +1000</pubDate><enclosure url="https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/AI%20Foundations%20and%20Implementation/media/001_ai_applications_across_banking_risk_functions.mp3" length="6342573" type="audio/mpeg" /><description>Narrated episode: 001 Ai Applications Across Banking Risk Functions</description></item><item><title>003 Mlops For Banking Environments</title><guid>003_mlops_for_banking_environments</guid><pubDate>Sun, 15 Jun 2025 02:28:13 +1000</pubDate><enclosure url="https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/AI%20Foundations%20and%20Implementation/media/003_mlops_for_banking_environments.mp3" length="5836269" type="audio/mpeg" /><description>Narrated episode: 003 Mlops For Banking Environments</description></item><item><title>002 From Rules To Learning Rpa Vs Ai Automation</title><guid>002_from_rules_to_learning_rpa_vs_ai_automation</guid><pubDate>Sun, 15 Jun 2025 02:27:32 +1000</pubDate><enclosure url="https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/AI%20Foundations%20and%20Implementation/media/002_from_rules_to_learning_rpa_vs_ai_automation.mp3" length="4930029" type="audio/mpeg" /><description>Narrated episode: 002 From Rules To Learning Rpa Vs Ai Automation</description></item><item><title>004 Ai Explainability And Model Monitoring</title><guid>004_ai_explainability_and_model_monitoring</guid><pubDate>Sun, 15 Jun 2025 02:27:12 +1000</pubDate><enclosure url="https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/AI%20Foundations%20and%20Implementation/media/004_ai_explainability_and_model_monitoring.mp3" length="4250733" type="audio/mpeg" /><description>Narrated episode: 004 Ai Explainability And Model Monitoring</description></item></channel></rss>

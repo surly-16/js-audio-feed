@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0"><channel><title>Practical Delivery and Agile AI Feed</title><link>https://surly-16.github.io/js-audio-feed/Practical%20Delivery%20and%20Agile%20AI/</link><description>Narrated episodes on Practical Delivery and Agile AI</description><language>en-au</language><itunes:explicit>no</itunes:explicit><itunes:image href="https://github.com/surly-16/js-audio-feed/blob/main/Practical%20Delivery%20and%20Agile%20AI/cover.png?raw=true" /><image><url>https://github.com/surly-16/js-audio-feed/blob/main/Practical%20Delivery%20and%20Agile%20AI/cover.png?raw=true</url><title>Practical Delivery and Agile AI Feed</title><link>https://surly-16.github.io/js-audio-feed/Practical%20Delivery%20and%20Agile%20AI/</link></image><item><title>008 Measuring Success In Early Stage Ai Squads</title><guid>008_measuring_success_in_early_stage_ai_squads</guid><pubDate>Sun, 15 Jun 2025 03:13:16 +1000</pubDate><enclosure url="https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Practical%20Delivery%20and%20Agile%20AI/media/008_measuring_success_in_early_stage_ai_squads.mp3" length="6828525" type="audio/mpeg" /><description>Narrated episode: 008 Measuring Success In Early Stage Ai Squads
+
+When your AI squad delivers their first production model, how do you know if it's actually successful? Not the vanity metrics that look good in steering committees, but the real indicators that predict whether this capability will scale across the bank or quietly disappear in six months.
+
+I've watched dozens of AI initiatives launch with fanfare only to fade into obscurity. The difference between those that transform how we work and those that become expensive experiments? How we measure success from day one.
+
+Let me share what I've learned leading AI squads at one of Australia's major banks. We're not talking about measuring accuracy scores or model performance—your data scientists have that covered. We're talking about the operational metrics that determine whether your AI investment delivers sustainable value in a regulated environment.
+
+
+
+First, let's address the elephant in the room. Traditional ROI calculations don't work for early-stage AI. When SmartDev tried measuring experimental ROI on their first ML projects, they found the numbers were meaningless. Why? Because you're not just building a model—you're establishing a capability. The first credit risk model might take six months and cost half a million dollars. The tenth one? Two weeks and fifty thousand.
+
+So instead of chasing immediate ROI, successful AI squads track capability velocity. How fast can your team go from business problem to deployed solution? When we started our journey, our first fraud detection model took four months from ideation to production. By tracking each stage—data access, feature engineering, model training, validation, deployment—we identified that data access consumed 60% of our timeline.
+
+That insight drove us to invest in a feature store and automated data pipelines. Now similar models deploy in three weeks. That's the kind of metric that matters—not because it's impressive in isolation, but because it predicts our ability to scale AI across hundreds of use cases.
+
+
+
+Grant Thornton's research on early-stage compliance metrics revealed something crucial: regulated enterprises that succeed with AI measure trust before value. This seems counterintuitive when you're under pressure to show results, but here's why it works.
+
+
+Every AI model in a bank operates under what I call the "trust tax"—the additional effort required to make stakeholders confident in automated decisions. This includes explainability documentation, bias testing, performance monitoring, and audit trails. Teams that don't measure and optimize this trust tax early find their models stuck in endless validation cycles.
+
+
+We learned this the hard way with our first customer segmentation model. The data science team celebrated 94% accuracy, but it took another four months to get through risk and compliance reviews. Why? We hadn't built trust metrics into our development process. No standardized explainability reports. No automated bias testing. No clear audit trail for model decisions.
+
+Now every squad tracks their trust velocity—how quickly they can move a model through compliance gates. We measure time spent on documentation, number of risk committee questions, and rounds of revision required. Models that score well on these trust metrics move to production 3x faster than those that don't.
+
+
+
+But trust is just table stakes. The real question is whether your AI actually improves business outcomes. Sutherland's framework for moving past hype to value identifies three levels of AI maturity, each with different success metrics.
+
+Level one: Process metrics. Is the AI faster or more accurate than the current process? This is where most teams start and stop. Yes, your document classification model processes mortgage applications 80% faster. But so what?
+
+Level two: Outcome metrics. Does the AI improve business results? That same document classifier—does it reduce error rates? Decrease rework? Improve customer satisfaction? When CBA's AI Factory started measuring outcomes instead of just efficiency, they discovered their invoice processing AI didn't just save time—it reduced payment disputes by 40%.
+
+Level three: Strategic metrics. This is where AI becomes transformational. Does it enable new capabilities? Open new markets? Reduce strategic risks?
+
+
+
+Let me give you a concrete example from our risk team. They built an AI model to review credit assessments. The process metric looked good—75% faster reviews. The outcome metric was better—15% reduction in bad debt provisions. But the strategic metric revealed the real value: the AI identified patterns human reviewers consistently missed, fundamentally improving our risk appetite framework.
+
+This model didn't just automate existing work—it enhanced our capability to price risk. That's the kind of strategic value that justifies continued AI investment, even when individual model ROIs look marginal.
+
+
+Here's how we structure our measurement framework. Every AI initiative tracks metrics across four dimensions: capability building, trust establishment, outcome improvement, and strategic enablement. But—and this is crucial—we weight these differently based on maturity stage.
+
+
+In months one through three, we're 70% focused on capability metrics. How fast can we access data? How quickly can we iterate on models? How efficiently can we deploy to production? We're building the machine that builds the machines.
+
+Months four through six shift to trust metrics. Can we explain model decisions to regulators? Do we have robust monitoring for drift and bias? Can we demonstrate compliance with CPS 230 requirements? We're earning the right to operate at scale.
+
+
+
+Only after establishing capability and trust do we seriously measure business outcomes. This patience is hard to maintain when executives want quick wins, but it's the difference between sustainable AI transformation and expensive false starts.
+
+Finance Derivative's success metrics study found that teams focusing on immediate ROI in the first six months had an 80% project abandonment rate by year two. Why? They optimized for quick wins instead of building foundations. They deployed models without monitoring infrastructure. They claimed victory based on pilot results without considering scale requirements.
+
+Contrast that with teams that spent their first six months on capability and trust metrics. Their year-two abandonment rate? Less than 20%. More importantly, their third and fourth models delivered 10x the value of their first ones because they'd built reusable components, established trust patterns, and created scalable processes.
+
+
+
+So what should you actually measure in your early-stage AI squad? Here's my tactical playbook, refined through dozens of initiatives.
+
+First, instrument everything. Every model training run, every data pipeline execution, every deployment attempt. You can't improve what you don't measure. Use MLflow or similar platforms to automatically capture experiments, parameters, and results. This isn't just about model performance—it's about understanding your team's velocity and identifying bottlenecks.
+
+Second, create trust scorecards. For each model, score its explainability, bias testing coverage, monitoring completeness, and audit readiness. Make these scores visible to everyone—data scientists, business stakeholders, risk partners. When trust metrics are transparent, teams naturally optimize for them.
+
+
+Third, establish outcome baselines before deploying AI. I can't stress this enough. If you don't know your current error rates, processing times, and customer satisfaction scores, you can't prove AI impact. Westpac learned this lesson when they couldn't quantify the value of their chatbot investment—they had no baseline for call center metrics before deployment.
+
+
+Fourth, track reuse religiously. How many components from model one accelerated model two? This compound effect is where AI ROI really lives. Our fraud detection feature store now powers twelve different models. The investment in building it for the first model seemed excessive. Now it's the foundation of our competitive advantage.
+
+
+
+Let me address the compliance elephant in the room. APRA's CPS 234 and upcoming CPS 230 requirements mean every AI system needs demonstrable controls and monitoring. But here's the opportunity hidden in that obligation: compliance requirements force you to build the very infrastructure that enables scale.
+
+When ASIC Report 798 highlighted the need for explainable AI in financial services, many saw it as a burden. We saw it as a gift. It gave us executive mandate to invest in model interpretability tools, automated documentation, and real-time monitoring—exactly the capabilities that separate mature AI operations from experimental ones.
+
+Every compliance requirement is a scaling enabler in disguise. Automated model documentation? Essential for rapid deployment. Continuous monitoring for drift? Critical for maintaining performance at scale. Bias testing frameworks? Necessary for expanding into new customer segments.
+
+
+
+Now, let's talk about the metrics that actually predict long-term success. After analyzing our portfolio of AI initiatives, three early indicators consistently separate winners from losers.
+
+First: Time to first production deployment. Not pilot, not proof of concept—actual production serving real customers. Teams that deploy something real within 90 days, even if limited in scope, succeed at 3x the rate of teams that spend six months perfecting their first model. Why? Because production teaches lessons no amount of testing can reveal.
+
+Second: Stakeholder engagement frequency. Count how often business stakeholders actively engage with model outputs. Daily engagement predicts success. Weekly is workable. Monthly means you're building a science project, not a business solution. Our successful models all have business users checking dashboards, reviewing predictions, or adjusting parameters multiple times per week.
+
+Third: Iteration velocity post-deployment. How quickly can you update a model based on production feedback? Teams that can retrain and redeploy within days build trust and improve performance rapidly. Teams that need months for updates usually see their models deprecated before the first update ships.
+
+
+
+Here's a framework we use for monthly squad reviews. Each team presents four numbers: deployment velocity (days from idea to production), trust score (composite of explainability, monitoring, and compliance readiness), business impact (quantified outcome improvement), and reuse percentage (code and components leveraged from previous work).
+
+
+These four numbers tell the complete story. High velocity with low trust scores? You're building technical debt. High trust with low velocity? You're over-engineering. High impact with low reuse? You're not building sustainable capability. The magic happens when all four metrics trend upward together.
+
+
+We visualize these on a spider chart for each squad. It immediately shows where to focus improvement efforts. One squad might need to invest in automated testing to improve trust scores. Another might need to build shared components to increase reuse. The visual makes priorities obvious and progress measurable.
+
+
+
+Let me share a cautionary tale about vanity metrics. One of our squads built a customer churn prediction model with 95% accuracy. Impressive, right? They celebrated, executives were thrilled, and we fast-tracked expansion. Then we dug deeper.
+
+The model was 95% accurate because only 5% of customers churn annually. It essentially predicted "no churn" for everyone and got it right 95% of the time. Completely useless for actually preventing churn. This taught us to always measure lift over baseline, not absolute accuracy. What matters is how much better AI performs versus current methods, not how good the numbers look in isolation.
+
+Similarly, beware of measuring activity instead of outcomes. Lines of code written, models trained, experiments run—these are all vanity metrics if they don't connect to business value. One squad ran thousands of experiments optimizing model architecture for a 0.1% accuracy improvement. Meanwhile, the business process had a data quality issue causing 10% error rates. Perfect example of optimizing the wrong thing.
+
+
+
+So how do you build a measurement culture that drives real value? Start by making metrics visible and discussable. We run weekly metric reviews where squads share their numbers—good and bad—and discuss improvement strategies. No judgment, just collaborative problem-solving.
+
+Create metric ownership at every level. Data scientists own model performance metrics. Engineers own deployment velocity. Product owners own business impact. Risk partners own trust scores. When everyone has skin in the game, metrics become tools for collaboration, not weapons for blame.
+
+Most importantly, celebrate learning from failure as much as success. When a model fails to deliver expected value, the post-mortem focusing on which metrics we should have tracked becomes invaluable. These lessons prevent future failures and refine our measurement framework.
+
+
+
+Looking at successful AI transformations across Australian banking, a pattern emerges. ANZ's scaling of AI in credit decisions, Commonwealth Bank's AI Factory producing dozens of models annually, Westpac's productivity improvements through automation—they all started by measuring the right things at the right time.
+
+Early stage isn't about proving massive ROI. It's about demonstrating you can repeatedly turn business problems into deployed AI solutions with predictable velocity, acceptable risk, and improving efficiency. Get those foundations right, and the ROI follows naturally.
+
+Remember, you're not just building models—you're building an AI capability. Measure accordingly. Track how fast you're getting better, not just how good you are today. Monitor trust and compliance as enablers, not obstacles. Focus on outcomes that matter to the business, not metrics that impress data scientists.
+
+Your early-stage AI squad's success depends on measuring what matters when it matters. Get this right, and you'll build AI capabilities that transform how your bank operates. Get it wrong, and you'll join the graveyard of pilots that never scaled. The choice—and the metrics—are yours.</description></item><item><title>007 Building Mvp Culture In Risk Tech Teams</title><guid>007_building_mvp_culture_in_risk_tech_teams</guid><pubDate>Sun, 15 Jun 2025 03:11:28 +1000</pubDate><enclosure url="https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Practical%20Delivery%20and%20Agile%20AI/media/007_building_mvp_culture_in_risk_tech_teams.mp3" length="5202093" type="audio/mpeg" /><description>Narrated episode: 007 Building Mvp Culture In Risk Tech Teams</description></item><item><title>005 Confluence Documentation For Ai Projects</title><guid>005_confluence_documentation_for_ai_projects</guid><pubDate>Sun, 15 Jun 2025 03:10:35 +1000</pubDate><enclosure url="https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Practical%20Delivery%20and%20Agile%20AI/media/005_confluence_documentation_for_ai_projects.mp3" length="4729773" type="audio/mpeg" /><description>Narrated episode: 005 Confluence Documentation For Ai Projects</description></item><item><title>002 From Prototype To Production Ai Pilot Pathways</title><guid>002_from_prototype_to_production_ai_pilot_pathways</guid><pubDate>Sun, 15 Jun 2025 03:10:03 +1000</pubDate><enclosure url="https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Practical%20Delivery%20and%20Agile%20AI/media/002_from_prototype_to_production_ai_pilot_pathways.mp3" length="6759021" type="audio/mpeg" /><description>Narrated episode: 002 From Prototype To Production Ai Pilot Pathways</description></item><item><title>004 Integrating Ai Initiatives With Risk System Workflows</title><guid>004_integrating_ai_initiatives_with_risk_system_workflows</guid><pubDate>Sun, 15 Jun 2025 03:10:01 +1000</pubDate><enclosure url="https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Practical%20Delivery%20and%20Agile%20AI/media/004_integrating_ai_initiatives_with_risk_system_workflows.mp3" length="5017773" type="audio/mpeg" /><description>Narrated episode: 004 Integrating Ai Initiatives With Risk System Workflows</description></item><item><title>001 Running Ai Experiments In Risk Management Squads</title><guid>001_running_ai_experiments_in_risk_management_squads</guid><pubDate>Sun, 15 Jun 2025 03:08:48 +1000</pubDate><enclosure url="https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Practical%20Delivery%20and%20Agile%20AI/media/001_running_ai_experiments_in_risk_management_squads.mp3" length="5455725" type="audio/mpeg" /><description>Narrated episode: 001 Running Ai Experiments In Risk Management Squads</description></item></channel></rss>
