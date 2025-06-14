@@ -1,30 +1,54 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0"
-     xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
-  <channel>
-    <title>Justin’s Audio Feed</title>
-    <link>https://onedrive.live.com/</link>
-    <description>Strategic narrated content on AI, banking, and innovation</description>
-    <language>en-au</language>
+<?xml version='1.0' encoding='utf-8'?>
+<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0"><channel><title>Anonymous Narration Feed</title><link>https://surly-16.github.io/js-audio-feed/</link><description>Strategic narrated content on AI, banking, and innovation</description><language>en-au</language><itunes:explicit>no</itunes:explicit><itunes:image href="https://raw.githubusercontent.com/surly-16/js-audio-feed/main/cover.png" /><image><url>https://raw.githubusercontent.com/surly-16/js-audio-feed/main/cover.png</url><title>Anonymous Narration Feed</title><link>https://surly-16.github.io/js-audio-feed/</link></image><item><title>Designing Optimal Agent Architectures For Scalable Ai Workflows</title><enclosure url="https://raw.githubusercontent.com/surly-16/js-audio-feed/main/media/designing_optimal_agent_architectures_for_scalable_ai_workflows.mp3" length="2987949" type="audio/mpeg" /><guid>designing_optimal_agent_architectures_for_scalable_ai_workflows</guid><pubDate>Sat, 14 Jun 2025 21:29:40 +1000</pubDate><description>Narrated episode: Designing Optimal Agent Architectures For Scalable Ai Workflows
 
-    <item>
-      <title>Designing Agent Architectures</title>
-      <enclosure url="https://onedrive.live.com/download?resid=YOUR_FILE_ID"
-                 length="1234567"
-                 type="audio/mpeg"/>
-      <guid>agent-arch-001</guid>
-      <pubDate>Sat, 14 Jun 2025 09:00:00 +1000</pubDate>
-      <description>Exploring how agent-based systems transform banking risk management.</description>
-    </item>
+So here's something I've been thinking about lately.  We've all built workflows that started simple and ended up as tangled messes. Sound familiar?  Whether it's our credit decisioning pipelines or document processing systems, the pattern's the same. We bolt on new capabilities, add exception handling, and before we know it, we've created something no one wants to touch.
 
-    <item>
-      <title>Ssml Output</title>
-      <enclosure url="https://raw.githubusercontent.com/surly-16/js-audio-feed/main/ssml_output.mp3"
-                 length="987654"
-                 type="audio/mpeg"/>
-      <guid>ssml-output</guid>
-      <pubDate>Sat, 14 Jun 2025 21:00:00 +1000</pubDate>
-      <description>Narrated SSML output from the local pipeline.</description>
-    </item>
-  </channel>
-</rss>
+[PAUSE]
+
+Let me share what's been working for us in the Innovation team.  We've shifted from building monolithic automation scripts to designing what we call agent architectures. Think of it as moving from a single Swiss Army knife to a well-coordinated team of specialists.
+
+Here's the core idea:  Instead of one massive workflow trying to do everything, we create focused agents that excel at specific tasks. One agent might handle data validation. Another manages document extraction. A third orchestrates decisions based on policy rules.  Each agent has a clear contract—inputs, outputs, and capabilities.
+
+[PAUSE]
+
+Now, why does this matter for us at the bank?  Take our recent work with the Risk team on automated credit assessments. The old approach would've been a 5,000-line Python script that nobody could debug.  Instead, we built five specialized agents: document ingestion, identity verification, credit scoring, policy checking, and decision orchestration.
+
+The magic happens in how they communicate.  Each agent publishes its results to a shared message bus. Other agents subscribe to what they need. When the credit scoring agent updates a risk score, the policy agent automatically re-evaluates lending limits.  It's event-driven, scalable, and—here's the kicker—completely auditable.
+
+[PAUSE]
+
+Let me give you another example that's closer to home.  Our content generation workflows for regulatory reporting used to take days. One person would extract data, another would format it, someone else would review for compliance.  Now we have agents handling each step. The extraction agent pulls from multiple systems. The formatting agent applies templates based on regulatory requirements. The compliance agent checks against our rule library.
+
+But here's what makes it powerful: each agent maintains its own context and memory.  The compliance agent remembers previous violations and flags similar patterns. The formatting agent learns from corrections and improves over time.  We're not just automating—we're building systems that get smarter.
+
+[PAUSE]
+
+Now, let's talk about the technical stack.  We're using LangChain for agent orchestration, but the principles apply regardless of your tools. Each agent needs three things:  a clear prompt template that defines its role, a memory system to maintain context, and defined interfaces for input and output.
+
+Here's a pattern that's worked well.  We structure agents with a standard interface: they accept a context object, perform their specialized task, and return a result object with metadata.  This metadata includes confidence scores, data lineage, and decision rationale—critical for our audit requirements.
+
+[PAUSE]
+
+The implications for governance are significant.  Traditional automation is often a black box. With agent architectures, we can trace every decision back to its source. When a loan gets rejected, we can show exactly which agent made which determination and why.  That's not just good practice—it's becoming a regulatory requirement.
+
+We're also seeing benefits in change management.  Need to update credit policy rules? You modify one agent, not an entire system.  Want to add fraud detection? Deploy a new agent that subscribes to the relevant events. The architecture scales with our needs.
+
+[PAUSE]
+
+Looking ahead, we're exploring some fascinating developments.  Multi-agent debates, where agents with different perspectives challenge each other's conclusions before reaching consensus. Imagine a conservative risk agent debating with a growth-focused revenue agent, with a compliance agent as mediator.  It sounds abstract, but we're piloting this for complex credit decisions.
+
+We're also experimenting with agent specialization by market segment.  A small business lending agent that understands cash flow patterns. A mortgage agent trained on property valuation models. Each brings domain expertise without compromising the overall architecture.
+
+[PAUSE]
+
+So what can you do with this tomorrow?  Start by identifying one workflow that's become too complex. Map out its logical components. Ask yourself: what would this look like as a team of specialists instead of one generalist?
+
+Design your first agent with a narrow focus.  Maybe it just validates ABNs or extracts key terms from contracts. Build in logging and metadata from day one.  Test how it performs compared to your current approach.
+
+Most importantly, think about the interfaces between agents.  How will they share context? What events trigger actions? How do you maintain an audit trail?  These design decisions will determine whether you build a scalable system or just create new complexity.
+
+[PAUSE]
+
+Here's what I want you to reflect on:  We're not just building better automation. We're designing the operating system for how our bank will function in five years.  Every agent we deploy, every workflow we decompose, is a step toward a more intelligent, adaptable organization.
+
+The question isn't whether to adopt agent architectures.  It's how quickly we can learn to think in terms of specialized, collaborative intelligence rather than monolithic processes.  That shift in mindset? That's where the real transformation begins.</description><link>https://raw.githubusercontent.com/surly-16/js-audio-feed/main/media/designing_optimal_agent_architectures_for_scalable_ai_workflows.txt</link></item><item><title>Ssml Output</title><enclosure url="https://raw.githubusercontent.com/surly-16/js-audio-feed/main/media/ssml_output.mp3" length="1006317" type="audio/mpeg" /><guid>ssml_output</guid><pubDate>Sat, 14 Jun 2025 21:10:35 +1000</pubDate><description>Narrated episode: Ssml Output</description><link>https://raw.githubusercontent.com/surly-16/js-audio-feed/main/media/ssml_output.txt</link></item></channel></rss>
