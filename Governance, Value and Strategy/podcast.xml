@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0"><channel><title>Governance, Value and Strategy Feed</title><link>https://surly-16.github.io/js-audio-feed/Governance,%20Value%20and%20Strategy/</link><description>Narrated episodes on Governance, Value and Strategy</description><language>en-au</language><itunes:explicit>no</itunes:explicit><itunes:image href="https://github.com/surly-16/js-audio-feed/blob/main/Governance,%20Value%20and%20Strategy/cover.png?raw=true" /><image><url>https://github.com/surly-16/js-audio-feed/blob/main/Governance,%20Value%20and%20Strategy/cover.png?raw=true</url><title>Governance, Value and Strategy Feed</title><link>https://surly-16.github.io/js-audio-feed/Governance,%20Value%20and%20Strategy/</link></image><item><title>004 Risk Based Ai Roadmap Development</title><guid>004_risk_based_ai_roadmap_development</guid><pubDate>Sun, 15 Jun 2025 03:36:42 +1000</pubDate><enclosure url="https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Governance,%20Value%20and%20Strategy/media/004_risk_based_ai_roadmap_development.mp3" length="5001069" type="audio/mpeg" /><description>Narrated episode: 004 Risk Based Ai Roadmap Development
+
+When I joined the bank's AI innovation team eighteen months ago, our risk teams were drowning in manual reviews. Today, they're processing three times the volume with half the effort. The difference? A risk-based roadmap that actually works in production.
+
+Here's what most organizations get wrong about AI in risk management: they start with the technology, not the process. They buy expensive platforms, hire data scientists, then wonder why adoption stalls. I've watched this pattern repeat across every major Australian bank.
+
+Let me share what actually works.
+
+
+
+Start with process maturity, not model complexity. When CBA launched their AI Factory, they didn't begin with neural networks. They mapped every risk process first, identifying where rule-based automation could deliver immediate wins. Think credit memo reviews, transaction monitoring, compliance reporting. These aren't sexy use cases, but they're where you build trust.
+
+I learned this running Lean Six Sigma projects before AI was mainstream. You measure baseline performance, identify variation, then systematically improve. AI follows the same discipline, just with different tools.
+
+
+
+Here's our framework for risk-based roadmap development. First, categorize your use cases by regulatory impact. APRA's CPS 230 requirements mean anything touching operational resilience needs extra scrutiny. We use a simple matrix: regulatory sensitivity on one axis, process complexity on the other.
+
+Low complexity, low regulatory risk? That's your starting point. Document verification, data quality checks, report generation. These build confidence while you develop governance frameworks.
+
+
+
+Let me give you a concrete example. Our trade surveillance team was manually reviewing thousands of alerts monthly. Most were false positives from outdated rules. Instead of jumping straight to machine learning, we first implemented intelligent filtering using decision trees. Simple, explainable, auditable.
+
+The results? Seventy percent reduction in manual reviews within three months. More importantly, our risk committee understood exactly how it worked. That trust enabled us to progress to more sophisticated models.
+
+
+
+McKinsey's research on generative AI in risk management highlights something critical: successful implementations focus on augmentation, not replacement. Your risk analysts aren't going anywhere. They're becoming more strategic.
+
+Think about anti-money laundering investigations. Previously, analysts spent eighty percent of their time gathering data from multiple systems. Now, AI aggregates that information in seconds, presenting it in standardized formats. The analyst focuses on pattern recognition and decision-making.
+
+
+
+But here's where many banks stumble: they underestimate the change management required. I've seen technically perfect solutions fail because teams weren't prepared for new workflows.
+
+
+When Westpac reported forty percent productivity gains from their AI initiatives, they credited extensive training programs. Not just technical training, but process redesign workshops where teams rebuilt their workflows around AI capabilities.
+
+
+We run similar programs, but with a twist. Risk teams design their own automation roadmaps. They know their pain points better than any innovation team. Our role is translating those needs into technical requirements.
+
+
+
+Let's talk about the technical architecture that enables this. You need three layers: data foundation, model management, and integration framework.
+
+Data foundation isn't glamorous, but it's where most initiatives fail. KPMG's AI risk prioritization framework emphasizes data quality as the primary success factor. In banking, that means reconciling legacy systems, standardizing formats, and establishing single sources of truth.
+
+We spent six months just cleaning customer data before deploying our first risk models. Painful? Yes. Necessary? Absolutely. Every model since has benefited from that foundation.
+
+
+
+Model management is where MLOps meets regulatory requirements. ASIC Report 798 on AI governance expects clear documentation of model decisions. That means version control, performance monitoring, and audit trails for every prediction.
+
+We use a combination of open-source tools and commercial platforms. MLflow for experiment tracking, Evidently AI for drift detection, and custom dashboards for business metrics. The key is making these accessible to risk teams, not just data scientists.
+
+
+
+Integration is where rubber meets road. Your AI models need to fit seamlessly into existing workflows. That means APIs for real-time scoring, batch processing for periodic reviews, and human-in-the-loop interfaces for complex decisions.
+
+Grant Thornton's research on AI in regulatory compliance shows that integrated systems deliver five times more value than standalone solutions. Our credit risk models feed directly into loan origination systems. Compliance alerts route automatically to investigation queues. No manual handoffs, no data silos.
+
+
+
+Now, let's address the elephant in the room: generative AI. Everyone wants ChatGPT for risk management. Here's my take: start small, stay focused.
+
+We're piloting GenAI for specific use cases: drafting risk assessment summaries, generating compliance narratives, and synthesizing regulatory updates. Each has clear boundaries and human oversight.
+
+The key is treating GenAI as a productivity tool, not a decision-maker. Our risk policies explicitly require human validation for any AI-generated content that impacts customers or regulatory reporting.
+
+
+
+Integrio Systems' ranking of AI use cases puts document processing and regulatory reporting in the top five for financial services. That aligns with our experience. These areas offer quick wins with manageable risk.
+
+But here's what the rankings miss: the compound effect of multiple small improvements. When you automate document extraction, standardize data formats, and streamline workflows, the cumulative impact transforms entire departments.
+
+
+
+Let me share our roadmap template. Phase one: process standardization and data preparation. Three to six months. Focus on cleaning data, documenting workflows, and identifying quick wins.
+
+Phase two: pilot implementations. Six to nine months. Deploy rule-based automation for low-risk processes. Build governance frameworks. Train teams on new tools.
+
+Phase three: scale and sophistication. Nine to eighteen months. Introduce machine learning for pattern recognition. Expand to medium-risk processes. Establish continuous improvement cycles.
+
+Phase four: advanced capabilities. Eighteen months plus. Deploy GenAI for specific use cases. Integrate predictive models into decision-making. Build self-improving systems.
+
+
+
+The timeline seems long, but consider the alternative. I've seen banks spend millions on AI platforms that deliver nothing because they skipped foundational steps. Our approach delivers value every quarter while building toward transformational capabilities.
+
+
+Critical success factors? Executive sponsorship, dedicated funding, and most importantly, risk team ownership. When risk professionals drive their own automation agenda, adoption follows naturally.
+
+
+
+
+Let's talk metrics. Traditional KPIs focus on efficiency: processing time, cost per transaction, error rates. These matter, but miss the bigger picture.
+
+We track risk-adjusted metrics: false positive reduction, regulatory finding prevention, and decision consistency. These demonstrate AI's value in improving risk outcomes, not just operational efficiency.
+
+For example, our transaction monitoring models don't just process more alerts. They identify suspicious patterns human reviewers missed. That's the metric that matters to regulators and executives.
+
+
+
+Common pitfalls to avoid? First, over-engineering solutions. Start simple, iterate based on feedback. Second, ignoring explainability. If risk teams can't understand how models make decisions, they won't trust them.
+
+Third, underestimating maintenance. Models degrade. Data drifts. Regulations change. Budget twenty percent of development effort for ongoing maintenance. It's not optional in regulated environments.
+
+
+
+Looking ahead, I see three trends shaping risk-based AI roadmaps. First, federated learning enabling collaboration without data sharing. Imagine banks collectively improving fraud detection while maintaining data privacy.
+
+Second, automated governance using AI to monitor AI. Meta-models that detect bias, ensure compliance, and flag anomalies in other models' behavior.
+
+Third, natural language interfaces making AI accessible to all risk professionals. No coding required, just conversational queries returning validated, auditable insights.
+
+
+
+Here's my challenge to you: pick one risk process this week. Map its current state. Identify three manual steps that could be automated. Estimate the effort and impact. That's your first roadmap item.
+
+Don't wait for perfect conditions. Don't over-plan. Start where you are, use what you have, do what you can. The banks succeeding with AI aren't the ones with the biggest budgets. They're the ones taking consistent, risk-based steps forward.
+
+Remember, this isn't about replacing human judgment in risk management. It's about amplifying human expertise with intelligent tools. When you get that balance right, you don't just improve efficiency. You fundamentally enhance your organization's ability to identify, assess, and mitigate risk.
+
+That's the real promise of AI in risk management. Not just doing things faster, but doing them better. And with the right roadmap, it's entirely achievable.</description></item><item><title>002 Ai Governance Gaps And Model Risk Management</title><guid>002_ai_governance_gaps_and_model_risk_management</guid><pubDate>Sun, 15 Jun 2025 03:36:03 +1000</pubDate><enclosure url="https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Governance,%20Value%20and%20Strategy/media/002_ai_governance_gaps_and_model_risk_management.mp3" length="4841709" type="audio/mpeg" /><description>Narrated episode: 002 Ai Governance Gaps And Model Risk Management</description></item><item><title>003 Building Compliant Ai Governance Frameworks</title><guid>003_building_compliant_ai_governance_frameworks</guid><pubDate>Sun, 15 Jun 2025 03:35:37 +1000</pubDate><enclosure url="https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Governance,%20Value%20and%20Strategy/media/003_building_compliant_ai_governance_frameworks.mp3" length="3450669" type="audio/mpeg" /><description>Narrated episode: 003 Building Compliant Ai Governance Frameworks</description></item><item><title>001 Navigating Australia S Ai Regulatory Framework</title><guid>001_navigating_australia_s_ai_regulatory_framework</guid><pubDate>Sun, 15 Jun 2025 03:34:59 +1000</pubDate><enclosure url="https://github.com/surly-16/js-audio-feed/raw/refs/heads/main/Governance,%20Value%20and%20Strategy/media/001_navigating_australia_s_ai_regulatory_framework.mp3" length="4447149" type="audio/mpeg" /><description>Narrated episode: 001 Navigating Australia S Ai Regulatory Framework</description></item></channel></rss>
